@@ -1,0 +1,308 @@
+DeviceModel GAB
+InterfaceDescription 2 GAB {
+roleDetails
+{ RoleId= 2 , RoleName= "Gab Engineer" , AllowedUserNumber= 2 RoleId= 1 , RoleName= "Lmc Engineer" , AllowedUserNumber= 2 RoleId= 17 , RoleName= "Gab Lmc Engineer" , AllowedUserNumber= 2 RoleId= 18 , RoleName= "Gwb Engineer" , AllowedUserNumber= 2 }
+privilegeDetails
+{ PrivilegeId= 2 , PrivilegeName= gab_engineer_write PrivilegeId= 1 , PrivilegeName= lmc_engineer_write PrivilegeId= 19 , PrivilegeName= gab_engineer_control }
+commands
+{ set_gablo_8 8 [ hwId = 1 , cmdPkt = 2 , PrivilegeId= 2 , PrivilegeName= gab_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , long Lo_Freq_Ch_1 = 600000 , long Lo_Freq_Ch_2 = 600000 ]
+set_gabconf_9 9 [ hwId = 101 , cmdPkt = 2 , PrivilegeId= 2 , PrivilegeName= gab_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , float Attn_Ch_1 = 10.0 , float Attn_Ch_2 = 10.0 ]
+set_gabconf_10 10 [ hwId = 2 , cmdPkt = 1 , PrivilegeId= 2 , PrivilegeName= gab_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , long Lo_Freq_Ch_1 = 600000 , long Lo_Freq_Ch_2 = 600000 , float Attn_Ch_1 = 10.0 , float Attn_Ch_2 = 10.0 , short I_P_Mode1_Ch_1 = 0 , short I_P_Mode1_Ch_2 = 0 , short Mixer_Direct_Path_Ch_1 = 0 , short Mixer_Direct_Path_Ch_2 = 0 , short I_P_Mode2_Ch_1 = 0 , short I_P_Mode2_Ch_2 = 0 , short Filter_RF_Ch_1 = 2 , short Filter_RF_Ch_2 = 2 , long LPF_Freq_Ch_1 = 400 , long LPF_Freq_Ch_2 = 400 , short Spare_Ch_1 = 0 , short Spare_Ch_2 = 0 ]
+set_lo_51 51 [ hwId = 2 , cmdPkt = 1 , PrivilegeId= 2 , PrivilegeName= gab_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , long Lo_Freq_Ch_1 = 600000 , long Lo_Freq_Ch_2 = 600000 ]
+set_noise_52 52 [ hwId = 2 , cmdPkt = 1 , PrivilegeId= 2 , PrivilegeName= gab_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short I_P_Mode1_Ch_1 = 0 , short I_P_Mode1_Ch_2 = 0 ]
+set_mixer_53 53 [ hwId = 2 , cmdPkt = 1 , PrivilegeId= 2 , PrivilegeName= gab_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short Mixer_Direct_Path_Ch_1 = 0 , short Mixer_Direct_Path_Ch_2 = 0 ]
+set_synth_54 54 [ hwId = 2 , cmdPkt = 1 , PrivilegeId= 2 , PrivilegeName= gab_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short I_P_Mode2_Ch_1 = 0 , short I_P_Mode2_Ch_2 = 0 ]
+set_filrf_55 55 [ hwId = 2 , cmdPkt = 1 , PrivilegeId= 2 , PrivilegeName= gab_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short Filter_RF_Ch_1 = 2 , short Filter_RF_Ch_2 = 2 ]
+set_lpf_56 56 [ hwId = 2 , cmdPkt = 1 , PrivilegeId= 2 , PrivilegeName= gab_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , long LPF_Freq_Ch_1 = 400 , long LPF_Freq_Ch_2 = 400 ]
+set_spare_57 57 [ hwId = 2 , cmdPkt = 1 , PrivilegeId= 2 , PrivilegeName= gab_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short Spare_Ch_1 = 0 , short Spare_Ch_2 = 0 ]
+setMaintenance_79 79 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 2 , PrivilegeName= gab_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+setReset_80 80 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 2 , PrivilegeName= gab_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+set_attn_89 89 [ hwId = 2 , cmdPkt = 1 , PrivilegeId= 2 , PrivilegeName= gab_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , float Attn_Ch_1 = 10.0 , float Attn_Ch_2 = 10.0 ]
+setDomonTimeInterval_121 121 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 2 , PrivilegeName= gab_engineer_write , short domonTimeInterval = 3 ]
+setShutdown_109 109 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 2 , PrivilegeName= gab_engineer_write ]
+}
+operatingStates
+{
+ok , reset , suspend , timeout , maintenance , shutdown , disconnected
+}
+TangoDetails { DeviceId = 56 , DomainName = LMC , FamilyName = GAB , TangoMember = GAB_S03 , HostName = gablmc }
+ioReferenceDetails { ReferenceId= 40 , ReferenecName= GAB_S03 } }
+ControlNode GAB_S03 implements interface GAB.GAB {
+DeviceCommandResponseBlock {
+DeviceCommand GAB.GAB.set_gablo_8 {
+CommandValidation {
+Validation {
+GAB.GAB.set_gablo_8.Lo_Freq_Ch_1 [ MaxValue = 1500000 MinValue = 100000 ]
+GAB.GAB.set_gablo_8.Lo_Freq_Ch_2 [ MaxValue = 1500000 MinValue = 100000 ]
+}
+}
+StateTransition {
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.suspend
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.disconnected
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.reset
+currentState GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.ok
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.shutdown => nextState GAB.GAB.maintenance
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.disconnected => nextState GAB.GAB.shutdown
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand GAB.GAB.set_gabconf_9 {
+CommandValidation {
+Validation {
+GAB.GAB.set_gabconf_9.Attn_Ch_1 [ MaxValue = 31.5 MinValue = 0.0 ]
+GAB.GAB.set_gabconf_9.Attn_Ch_2 [ MaxValue = 31.5 MinValue = 0.0 ]
+}
+}
+StateTransition {
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.suspend
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.disconnected
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.reset
+currentState GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.ok
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.shutdown => nextState GAB.GAB.maintenance
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.disconnected => nextState GAB.GAB.shutdown
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand GAB.GAB.set_gabconf_10 {
+CommandValidation {
+Validation {
+GAB.GAB.set_gabconf_10.Lo_Freq_Ch_1 [ MaxValue = 1500000 MinValue = 100000 ]
+GAB.GAB.set_gabconf_10.Lo_Freq_Ch_2 [ MaxValue = 1500000 MinValue = 100000 ]
+GAB.GAB.set_gabconf_10.Attn_Ch_1 [ MaxValue = 31.5 MinValue = 0.0 ]
+GAB.GAB.set_gabconf_10.Attn_Ch_2 [ MaxValue = 31.5 MinValue = 0.0 ]
+GAB.GAB.set_gabconf_10.I_P_Mode1_Ch_1 [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] ]
+GAB.GAB.set_gabconf_10.I_P_Mode1_Ch_2 [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] ]
+GAB.GAB.set_gabconf_10.Mixer_Direct_Path_Ch_1 [ Possiblevalues = [ 0 ] [ 1 ] ]
+GAB.GAB.set_gabconf_10.Mixer_Direct_Path_Ch_2 [ Possiblevalues = [ 0 ] [ 1 ] ]
+GAB.GAB.set_gabconf_10.I_P_Mode2_Ch_1 [ Possiblevalues = [ 0 ] [ 1 ] ]
+GAB.GAB.set_gabconf_10.I_P_Mode2_Ch_2 [ Possiblevalues = [ 0 ] [ 1 ] ]
+GAB.GAB.set_gabconf_10.Filter_RF_Ch_1 [ MaxValue = 7 MinValue = 0 ]
+GAB.GAB.set_gabconf_10.Filter_RF_Ch_2 [ MaxValue = 7 MinValue = 0 ]
+GAB.GAB.set_gabconf_10.LPF_Freq_Ch_1 [ Possiblevalues = [ 100 ] [ 200 ] [ 400 ] [ 0 ] ]
+GAB.GAB.set_gabconf_10.LPF_Freq_Ch_2 [ Possiblevalues = [ 100 ] [ 200 ] [ 400 ] [ 0 ] ]
+GAB.GAB.set_gabconf_10.Spare_Ch_1 [ Possiblevalues = [ 0 ] ]
+GAB.GAB.set_gabconf_10.Spare_Ch_2 [ Possiblevalues = [ 0 ] ]
+}
+}
+StateTransition {
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.suspend
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.disconnected
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.reset
+currentState GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.ok
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.shutdown => nextState GAB.GAB.maintenance
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.disconnected => nextState GAB.GAB.shutdown
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand GAB.GAB.set_lo_51 {
+CommandValidation {
+Validation {
+GAB.GAB.set_lo_51.Lo_Freq_Ch_1 [ MaxValue = 1500000 MinValue = 100000 ]
+GAB.GAB.set_lo_51.Lo_Freq_Ch_2 [ MaxValue = 1500000 MinValue = 100000 ]
+}
+}
+StateTransition {
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.suspend
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.disconnected
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.reset
+currentState GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.ok
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.shutdown => nextState GAB.GAB.maintenance
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.disconnected => nextState GAB.GAB.shutdown
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand GAB.GAB.set_noise_52 {
+CommandValidation {
+Validation {
+GAB.GAB.set_noise_52.I_P_Mode1_Ch_1 [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] ]
+GAB.GAB.set_noise_52.I_P_Mode1_Ch_2 [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] ]
+}
+}
+StateTransition {
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.suspend
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.disconnected
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.reset
+currentState GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.ok
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.shutdown => nextState GAB.GAB.maintenance
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.disconnected => nextState GAB.GAB.shutdown
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand GAB.GAB.set_mixer_53 {
+CommandValidation {
+Validation {
+GAB.GAB.set_mixer_53.Mixer_Direct_Path_Ch_1 [ Possiblevalues = [ 0 ] [ 1 ] ]
+GAB.GAB.set_mixer_53.Mixer_Direct_Path_Ch_2 [ Possiblevalues = [ 0 ] [ 1 ] ]
+}
+}
+StateTransition {
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.suspend
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.disconnected
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.reset
+currentState GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.ok
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.shutdown => nextState GAB.GAB.maintenance
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.disconnected => nextState GAB.GAB.shutdown
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand GAB.GAB.set_synth_54 {
+CommandValidation {
+Validation {
+GAB.GAB.set_synth_54.I_P_Mode2_Ch_1 [ Possiblevalues = [ 0 ] [ 1 ] ]
+GAB.GAB.set_synth_54.I_P_Mode2_Ch_2 [ Possiblevalues = [ 0 ] [ 1 ] ]
+}
+}
+StateTransition {
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.suspend
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.disconnected
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.reset
+currentState GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.ok
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.shutdown => nextState GAB.GAB.maintenance
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.disconnected => nextState GAB.GAB.shutdown
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand GAB.GAB.set_filrf_55 {
+CommandValidation {
+Validation {
+GAB.GAB.set_filrf_55.Filter_RF_Ch_1 [ MaxValue = 7 MinValue = 0 ]
+GAB.GAB.set_filrf_55.Filter_RF_Ch_2 [ MaxValue = 7 MinValue = 0 ]
+}
+}
+StateTransition {
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.suspend
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.disconnected
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.reset
+currentState GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.ok
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.shutdown => nextState GAB.GAB.maintenance
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.disconnected => nextState GAB.GAB.shutdown
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand GAB.GAB.set_lpf_56 {
+CommandValidation {
+Validation {
+GAB.GAB.set_lpf_56.LPF_Freq_Ch_1 [ Possiblevalues = [ 100 ] [ 200 ] [ 400 ] [ 0 ] ]
+GAB.GAB.set_lpf_56.LPF_Freq_Ch_2 [ Possiblevalues = [ 100 ] [ 200 ] [ 400 ] [ 0 ] ]
+}
+}
+StateTransition {
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.suspend
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.disconnected
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.reset
+currentState GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.ok
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.shutdown => nextState GAB.GAB.maintenance
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.disconnected => nextState GAB.GAB.shutdown
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand GAB.GAB.set_spare_57 {
+CommandValidation {
+Validation {
+GAB.GAB.set_spare_57.Spare_Ch_1 [ Possiblevalues = [ 0 ] ]
+GAB.GAB.set_spare_57.Spare_Ch_2 [ Possiblevalues = [ 0 ] ]
+}
+}
+StateTransition {
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.suspend
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.disconnected
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.reset
+currentState GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.ok
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.shutdown => nextState GAB.GAB.maintenance
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.disconnected => nextState GAB.GAB.shutdown
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand GAB.GAB.setMaintenance_79 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.suspend
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.disconnected
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.reset
+currentState GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.ok
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.shutdown => nextState GAB.GAB.maintenance
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.disconnected => nextState GAB.GAB.shutdown
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand GAB.GAB.setReset_80 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.suspend
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.disconnected
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.reset
+currentState GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.ok
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.shutdown => nextState GAB.GAB.maintenance
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.disconnected => nextState GAB.GAB.shutdown
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand GAB.GAB.set_attn_89 {
+CommandValidation {
+Validation {
+GAB.GAB.set_attn_89.Attn_Ch_1 [ MaxValue = 31.5 MinValue = 0.0 ]
+GAB.GAB.set_attn_89.Attn_Ch_2 [ MaxValue = 31.5 MinValue = 0.0 ]
+}
+}
+StateTransition {
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.suspend
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.disconnected
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.reset
+currentState GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.ok
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.shutdown => nextState GAB.GAB.maintenance
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.disconnected => nextState GAB.GAB.shutdown
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand GAB.GAB.setDomonTimeInterval_121 {
+CommandValidation {
+Validation {
+GAB.GAB.setDomonTimeInterval_121.domonTimeInterval [ MaxValue = 64 MinValue = -1 ]
+}
+}
+StateTransition {
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.suspend
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.disconnected
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.reset
+currentState GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.ok
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.shutdown => nextState GAB.GAB.maintenance
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.disconnected => nextState GAB.GAB.shutdown
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand GAB.GAB.setShutdown_109 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.suspend
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.disconnected
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown => nextState GAB.GAB.reset
+currentState GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.ok
+currentState GAB.GAB.ok , GAB.GAB.suspend , GAB.GAB.shutdown => nextState GAB.GAB.maintenance
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.timeout , GAB.GAB.maintenance , GAB.GAB.disconnected => nextState GAB.GAB.shutdown
+currentState GAB.GAB.ok , GAB.GAB.reset , GAB.GAB.suspend , GAB.GAB.maintenance , GAB.GAB.shutdown , GAB.GAB.disconnected => nextState GAB.GAB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+} } }

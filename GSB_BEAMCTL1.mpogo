@@ -1,0 +1,395 @@
+DeviceModel GSB
+InterfaceDescription 14 BEAMCTL1 {
+roleDetails
+{ RoleId= 12 , RoleName= "BeamCTL1 Engineer " , AllowedUserNumber= 2 RoleId= 18 , RoleName= "Gwb Engineer" , AllowedUserNumber= 2 RoleId= 8 , RoleName= "Gsb Engineer" , AllowedUserNumber= 2 RoleId= 18 , RoleName= "Gwb Engineer" , AllowedUserNumber= 2 }
+privilegeDetails
+{ PrivilegeId= 11 , PrivilegeName= beamCTL1_engineer_control PrivilegeId= 7 , PrivilegeName= gsb_engineer_control PrivilegeId= 21 , PrivilegeName= gwb_engineer_control }
+commands
+{ beaminit_133 133 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 11 , PrivilegeName= beamCTL1_engineer_control , PrivilegeId= 21 , PrivilegeName= gwb_engineer_control , PrivilegeId= 22 , PrivilegeName= beamCTL3_engineer_control , short integ = 1 , float samptime = 512.0 , long gps_int = 60000000 , long out_clk = 3 , long validedg = 0 , long gpsedge = 5 , datevalue date_obs = "Fri Sep 01 12:07:55 IST 2017" , string observer = "gmrt" , string code = "PRJ1" , int time_int = 0 , int freq_integ = 1 , short op_short = 1 , short bitpack = 0 , short bitsnos = 16 , short lsbbit = 0 , int smpwinsz = 4096 , short fltr_flg = 0 , short fltr_dat = 2 , int fft_len = 8192 , short bands = 1 , int rf = 325 , short de_disp = 0 , long DM = 0 , short BW = 16 , short band = 1 , int ref_ch = 256 , boolean fold_flg = false , long period = 0 , hex pol1_mask = "FFFF" , hex pol2_mask = "FFFF" , float base_integ = 1.0 ]
+startbeam_134 134 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 11 , PrivilegeName= beamCTL1_engineer_control , PrivilegeId= 21 , PrivilegeName= gwb_engineer_control , PrivilegeId= 22 , PrivilegeName= beamCTL3_engineer_control , string directory_path = "/opt/tangoworkspace/ControlNode/Configuration/" , string file_name = "*" , int time_int = 0 , string code = "PRJ1" , string source_name = "NGPOLE" , string Morph_Code = "0" , precisetime ra_mean = "(12:00:00.00)" , preciseangle dec_mean = "27:00:00.00" , float epoch = 1900.5 , float dra = 0.0 , float ddec = 0.0 , int seq = 0 , float FDI_F = 1.0 , float FDI_EF = 1.0 , float FDQ_E = 1.0 , float FDQ_EF = 1.0 , float FDU_F = 1.0 , float FDU_EF = 1.0 , float FDV_F = 1.0 , float FDV_EF = 1.0 , float source_velocity = 1.0 , string velocity_ref = "1" , string velocity_type = "1" , long DM = 0 , long period = 0 , float mjd_src = 57960.0 , float ra_app = 0.0 , float dec_app = 0.0 , float RF1 = 100.0 , float RF2 = 0.0 , float FIRST_LO1 = 0.0 , float FIRST_LO2 = 0.0 , float BB_LO1 = 0.0 , float BB_LO2 = 0.0 , int netsign1 = 0 , int netsign2 = 0 , int netsign3 = 0 , int netsign4 = 0 , hex pol1_mask = "FFFF" , hex pol2_mask = "FFFF" , string observer = "gmrt" , short integ = 1 , float samptime = 512.0 , long gps_int = 60000000 , long out_clk = 3 , long validedg = 0 , long gpsedge = 5 , datevalue date_obs = "Fri Sep 01 12:07:55 IST 2017" , int freq_integ = 1 , short op_short = 1 , short bitpack = 0 , short bitsnos = 16 , short lsbbit = 0 , int smpwinsz = 4096 , short fltr_flg = 0 , short fltr_dat = 2 , int fft_len = 8192 , short bands = 1 , int rf = 325 , short de_disp = 0 , short BW = 16 , short band = 1 , int ref_ch = 256 , boolean fold_flg = false , float base_integ = 1.0 ]
+stopbeam_135 135 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 11 , PrivilegeName= beamCTL1_engineer_control , PrivilegeId= 21 , PrivilegeName= gwb_engineer_control , PrivilegeId= 22 , PrivilegeName= beamCTL3_engineer_control ]
+stopbeamrecord_137 137 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 11 , PrivilegeName= beamCTL1_engineer_control , PrivilegeId= 21 , PrivilegeName= gwb_engineer_control , PrivilegeId= 22 , PrivilegeName= beamCTL3_engineer_control , string file_name = "*" ]
+savesetup_154 154 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 11 , PrivilegeName= beamCTL1_engineer_control , PrivilegeId= 21 , PrivilegeName= gwb_engineer_control , PrivilegeId= 22 , PrivilegeName= beamCTL3_engineer_control , string file_name = "*" ]
+loadbeampara_155 155 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 11 , PrivilegeName= beamCTL1_engineer_control , PrivilegeId= 21 , PrivilegeName= gwb_engineer_control , PrivilegeId= 22 , PrivilegeName= beamCTL3_engineer_control , string file_name = "*" ]
+halt_128 128 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 7 , PrivilegeName= gsb_engineer_control , PrivilegeId= 21 , PrivilegeName= gwb_engineer_control , PrivilegeId= 11 , PrivilegeName= beamCTL1_engineer_control ]
+beamsetup_132 132 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 7 , PrivilegeName= gsb_engineer_control , PrivilegeId= 21 , PrivilegeName= gwb_engineer_control , PrivilegeId= 11 , PrivilegeName= beamCTL1_engineer_control , short integ = 1 , float samptime = 512.0 , long gps_int = 60000000 , long out_clk = 3 , long validedg = 0 , long gpsedge = 5 , datevalue date_obs = "Fri Sep 01 12:07:55 IST 2017" , string observer = "gmrt" , string code = "PRJ1" , int time_int = 0 , int freq_integ = 1 , short op_short = 1 , short bitpack = 0 , short bitsnos = 16 , short lsbbit = 0 , int smpwinsz = 4096 , short fltr_flg = 0 , short fltr_dat = 2 , int fft_len = 8192 , short bands = 1 , int rf = 325 , short de_disp = 0 , long DM = 0 , short BW = 16 , short band = 1 , int ref_ch = 256 , boolean fold_flg = false , long period = 0 , hex pol1_mask = "FFFF" , hex pol2_mask = "FFFF" , float base_integ = 1.0 ]
+beamfinish_179 179 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 7 , PrivilegeName= gsb_engineer_control , PrivilegeId= 11 , PrivilegeName= beamCTL1_engineer_control , PrivilegeId= 12 , PrivilegeName= beamCTL2_engineer_control ]
+corrconfig_122 122 [ hwId = 0 , cmdPkt = 85 , PrivilegeId= 11 , PrivilegeName= beamCTL1_engineer_control , PrivilegeId= 7 , PrivilegeName= gsb_engineer_control , int GSB_MODE = 0 , int GSB_LTA = 8 , float GSB_ACQ_BW = 16.666666 , int GSB_FINAL_BW = 4 , int GSB_EDGE_FRQ = 0 , int GSB_CHAN_MAX = 512 , string GSB_CHAN_NUM = "0" , int GSB_STOKES = 2 , int GSB_CNTRL = 1 , boolean GSB_FSTOP = false , string GSB_BEAM_1 = "0:1" , string GSB_BEAM_2 = "0:1" , boolean GSB_GAINEQ = false , string GSB_BB_LO = "138000000.0:167000000.0" , string GSB_HOSTS = "1" , boolean GSB_CD_MODE = false , hex pantmask = "FFFF" , short corrmask = 8 , short bandmask = 3 , string file_name = "*" , string gsb_ifr_dataserver = "gsbm2" , string gsb_beam1_dataserver = "node_33" , string gsb_beam2_dataserver = "node_34" , float GSB_FREQ = 306.0 , int GPU_MODE = 0 , int GPU_LTA = 16 , float GPU_ACQ_BW = 200.0 , int GPU_FINAL_BW = 1 , int GPU_EDGE_FRQ = 0 , int GPU_CHAN_MAX = 2048 , string GPU_CHAN_NUM = "0:2047:1" , int GPU_STOKES = 2 , int GPU_CNTRL = 1 , boolean GPU_FSTOP = false , string GPU_BEAM_1 = "0:1" , string GPU_BEAM_2 = "0:1" , string GPU_BEAM_3 = "0:1" , string GPU_BEAM_4 = "0:1" , int GPU_BM_INT = 128 , boolean GPU_GAINEQ = false , int GPU_TPA = 0 , int GPU_BITS = 8 , int GPU_FILRFI = 0 , int GPU_BEAM_S = 0 , string GPU_HOSTS = "1" , string gpu_beam3_dataserver = "gwbh9" , string gpu_beam4_dataserver = "gwbh10" , float GPU_RF1 = 1460.0 , float GPU_RF2 = 1460.0 , float GPU_LO1_1 = 540.0 , float GPU_LO2_1 = 540.0 , int GPU_DDC = 0 , float GPU_DDCLO1 = 0.0 , float GPU_DDCLO2 = 0.0 , string GPU_SIDEBAND = "1 1" , float GPU_RF1_1 = 1460.0 , float GPU_RF1_2 = 1460.0 , float GPU_DDCLO1_1 = 540.0 , float GPU_DDCLO1_2 = 540.0 , string GPU_SB1 = "1 1" , string GCODE1 = "SUBA1" , float GPU_RF2_1 = 1200.0 , float GPU_RF2_2 = 1200.0 , float GPU_DDCLO2_1 = 0.0 , float GPU_DDCLO2_2 = 0.0 , string GPU_SB2 = "1 1" , string GCODE2 = "SUBA2" , float GPU_RF3_1 = 1460.0 , float GPU_RF3_2 = 1460.0 , float GPU_DDCLO3_1 = 0.0 , float GPU_DDCLO3_2 = 0.0 , string GPU_SB3 = "1 1" , string GCODE3 = "SUBA3" , float GPU_RF4_1 = 470.0 , float GPU_RF4_2 = 470.0 , float GPU_DDCLO4_1 = 0.0 , float GPU_DDCLO4_2 = 0.0 , string GPU_SB4 = "1 1" , string GCODE4 = "SUBA4" , float GPU_RF5_1 = 1060.0 , float GPU_RF5_2 = 1060.0 , float GPU_DDCLO5_1 = 0.0 , float GPU_DDCLO5_2 = 0.0 , string GPU_SB5 = "1 1" , string GCODE5 = "SUBA5" , string gpu_beam1_dataserver = "gwbh7" , string gpu_beam2_dataserver = "gwbh8" , string gpu_ifr_dataserver = "gwbh6" ]
+}
+operatingStates
+{
+ok , reset , suspend , timeout , maintenance , shutdown , disconnected
+}
+TangoDetails { DeviceId = 114 , DomainName = LMC , FamilyName = GWB , TangoMember = BEAMCTL1 , HostName = gwb }
+ioReferenceDetails { ReferenceId= 4 , ReferenecName= BEAMCTL1 } }
+ControlNode BEAMCTL1 implements interface GSB.BEAMCTL1 {
+DeviceCommandResponseBlock {
+DeviceCommand GSB.BEAMCTL1.beaminit_133 {
+CommandValidation {
+Validation {
+GSB.BEAMCTL1.beaminit_133.integ [ MaxValue = 64 MinValue = 1 ]
+GSB.BEAMCTL1.beaminit_133.samptime [ Possiblevalues = [ 512.0 ] ]
+GSB.BEAMCTL1.beaminit_133.gps_int [ MaxValue = 300000000 MinValue = 0 ]
+GSB.BEAMCTL1.beaminit_133.out_clk [ MaxValue = 5 MinValue = 0 ]
+GSB.BEAMCTL1.beaminit_133.validedg [ MaxValue = 5 MinValue = 0 ]
+GSB.BEAMCTL1.beaminit_133.gpsedge [ MaxValue = 10 MinValue = 0 ]
+GSB.BEAMCTL1.beaminit_133.date_obs [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.beaminit_133.observer [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.beaminit_133.code [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.beaminit_133.time_int [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] [ 4 ] ]
+GSB.BEAMCTL1.beaminit_133.freq_integ [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] [ 4 ] [ 8 ] [ 16 ] ]
+GSB.BEAMCTL1.beaminit_133.op_short [ Possiblevalues = [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.beaminit_133.bitpack [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] ]
+GSB.BEAMCTL1.beaminit_133.bitsnos [ Possiblevalues = [ 16 ] [ 32 ] ]
+GSB.BEAMCTL1.beaminit_133.lsbbit [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] ]
+GSB.BEAMCTL1.beaminit_133.smpwinsz [ Possiblevalues = [ 2048 ] [ 4096 ] ]
+GSB.BEAMCTL1.beaminit_133.fltr_flg [ Possiblevalues = [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.beaminit_133.fltr_dat [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] ]
+GSB.BEAMCTL1.beaminit_133.fft_len [ Possiblevalues = [ 8192 ] [ 16384 ] ]
+GSB.BEAMCTL1.beaminit_133.bands [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] [ 3 ] [ 4 ] ]
+GSB.BEAMCTL1.beaminit_133.rf [ Possiblevalues = [ 0 ] [ 150 ] [ 244 ] [ 325 ] [ 610 ] [ 1420 ] ]
+GSB.BEAMCTL1.beaminit_133.de_disp [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.beaminit_133.DM [ MaxValue = 100 MinValue = 0 ]
+GSB.BEAMCTL1.beaminit_133.BW [ Possiblevalues = [ 6 ] [ 16 ] [ 32 ] ]
+GSB.BEAMCTL1.beaminit_133.band [ Possiblevalues = [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.beaminit_133.ref_ch [ Possiblevalues = [ 256 ] [ 512 ] ]
+GSB.BEAMCTL1.beaminit_133.fold_flg [ Possiblevalues = [ false ] [ false ] ]
+GSB.BEAMCTL1.beaminit_133.period [ MaxValue = 10 MinValue = 0 ]
+GSB.BEAMCTL1.beaminit_133.pol1_mask [ MaxValue = "FFFFFFFF" MinValue = "0" ]
+GSB.BEAMCTL1.beaminit_133.pol2_mask [ MaxValue = "FFFFFFFF" MinValue = "0" ]
+GSB.BEAMCTL1.beaminit_133.base_integ [ MaxValue = 100.0 MinValue = 0.0 ]
+}
+}
+StateTransition {
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.suspend
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.disconnected
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.reset
+currentState GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.ok
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.maintenance
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.shutdown
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand GSB.BEAMCTL1.startbeam_134 {
+CommandValidation {
+Validation {
+GSB.BEAMCTL1.startbeam_134.directory_path [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.file_name [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.time_int [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] [ 4 ] ]
+GSB.BEAMCTL1.startbeam_134.code [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.source_name [ Possiblevalues = [ "NGPOLE" ] [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.Morph_Code [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.ra_mean [ MaxValue = "(24:00:00.0)" MinValue = "(00:00:00.0)" ]
+GSB.BEAMCTL1.startbeam_134.dec_mean [ MaxValue = "90:00:00.0" MinValue = "-56:00:00.0" ]
+GSB.BEAMCTL1.startbeam_134.epoch [ MaxValue = 2500.0 MinValue = 1500.0 Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.dra [ MaxValue = 24.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.startbeam_134.ddec [ MaxValue = 90.0 MinValue = -56.0 ]
+GSB.BEAMCTL1.startbeam_134.seq [ Possiblevalues = [ 0 ] ]
+GSB.BEAMCTL1.startbeam_134.FDI_F [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.FDI_EF [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.FDQ_E [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.FDQ_EF [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.FDU_F [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.FDU_EF [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.FDV_F [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.FDV_EF [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.source_velocity [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.velocity_ref [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.velocity_type [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.DM [ MaxValue = 100 MinValue = 0 ]
+GSB.BEAMCTL1.startbeam_134.period [ MaxValue = 10 MinValue = 0 ]
+GSB.BEAMCTL1.startbeam_134.mjd_src [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.ra_app [ MaxValue = 24.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.startbeam_134.dec_app [ MaxValue = 90.0 MinValue = -56.0 ]
+GSB.BEAMCTL1.startbeam_134.RF1 [ MaxValue = 2.0E9 MinValue = 0.0 ]
+GSB.BEAMCTL1.startbeam_134.RF2 [ MaxValue = 2.0E9 MinValue = 0.0 ]
+GSB.BEAMCTL1.startbeam_134.FIRST_LO1 [ MaxValue = 2.0E9 MinValue = 0.0 ]
+GSB.BEAMCTL1.startbeam_134.FIRST_LO2 [ MaxValue = 2.0E9 MinValue = 0.0 ]
+GSB.BEAMCTL1.startbeam_134.BB_LO1 [ MaxValue = 2.0E9 MinValue = 0.0 ]
+GSB.BEAMCTL1.startbeam_134.BB_LO2 [ MaxValue = 2.0E9 MinValue = 0.0 ]
+GSB.BEAMCTL1.startbeam_134.netsign1 [ Possiblevalues = [ -1 ] [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.startbeam_134.netsign2 [ Possiblevalues = [ -1 ] [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.startbeam_134.netsign3 [ Possiblevalues = [ -1 ] [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.startbeam_134.netsign4 [ Possiblevalues = [ -1 ] [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.startbeam_134.pol1_mask [ MaxValue = "FFFFFFFF" MinValue = "0" ]
+GSB.BEAMCTL1.startbeam_134.pol2_mask [ MaxValue = "FFFFFFFF" MinValue = "0" ]
+GSB.BEAMCTL1.startbeam_134.observer [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.integ [ MaxValue = 64 MinValue = 1 ]
+GSB.BEAMCTL1.startbeam_134.samptime [ Possiblevalues = [ 512.0 ] ]
+GSB.BEAMCTL1.startbeam_134.gps_int [ MaxValue = 300000000 MinValue = 0 ]
+GSB.BEAMCTL1.startbeam_134.out_clk [ MaxValue = 5 MinValue = 0 ]
+GSB.BEAMCTL1.startbeam_134.validedg [ MaxValue = 5 MinValue = 0 ]
+GSB.BEAMCTL1.startbeam_134.gpsedge [ MaxValue = 10 MinValue = 0 ]
+GSB.BEAMCTL1.startbeam_134.date_obs [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.freq_integ [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] [ 4 ] [ 8 ] [ 16 ] ]
+GSB.BEAMCTL1.startbeam_134.op_short [ Possiblevalues = [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.startbeam_134.bitpack [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] ]
+GSB.BEAMCTL1.startbeam_134.bitsnos [ Possiblevalues = [ 16 ] [ 32 ] ]
+GSB.BEAMCTL1.startbeam_134.lsbbit [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] ]
+GSB.BEAMCTL1.startbeam_134.smpwinsz [ Possiblevalues = [ 2048 ] [ 4096 ] ]
+GSB.BEAMCTL1.startbeam_134.fltr_flg [ Possiblevalues = [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.startbeam_134.fltr_dat [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] ]
+GSB.BEAMCTL1.startbeam_134.fft_len [ Possiblevalues = [ 8192 ] [ 16384 ] ]
+GSB.BEAMCTL1.startbeam_134.bands [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] [ 3 ] [ 4 ] ]
+GSB.BEAMCTL1.startbeam_134.rf [ Possiblevalues = [ 0 ] [ 150 ] [ 244 ] [ 325 ] [ 610 ] [ 1420 ] ]
+GSB.BEAMCTL1.startbeam_134.de_disp [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.startbeam_134.BW [ Possiblevalues = [ 6 ] [ 16 ] [ 32 ] ]
+GSB.BEAMCTL1.startbeam_134.band [ Possiblevalues = [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.startbeam_134.ref_ch [ Possiblevalues = [ 256 ] [ 512 ] ]
+GSB.BEAMCTL1.startbeam_134.fold_flg [ Possiblevalues = [ false ] [ false ] ]
+GSB.BEAMCTL1.startbeam_134.base_integ [ MaxValue = 100.0 MinValue = 0.0 ]
+}
+}
+StateTransition {
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.suspend
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.disconnected
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.reset
+currentState GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.ok
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.maintenance
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.shutdown
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand GSB.BEAMCTL1.stopbeam_135 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.suspend
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.disconnected
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.reset
+currentState GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.ok
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.maintenance
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.shutdown
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand GSB.BEAMCTL1.stopbeamrecord_137 {
+CommandValidation {
+Validation {
+GSB.BEAMCTL1.stopbeamrecord_137.file_name [ Possiblevalues = [ "*" ] ]
+}
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand GSB.BEAMCTL1.savesetup_154 {
+CommandValidation {
+Validation {
+GSB.BEAMCTL1.savesetup_154.file_name [ Possiblevalues = [ "*" ] ]
+}
+}
+StateTransition {
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.suspend
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.disconnected
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.reset
+currentState GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.ok
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.maintenance
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.shutdown
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand GSB.BEAMCTL1.loadbeampara_155 {
+CommandValidation {
+Validation {
+GSB.BEAMCTL1.loadbeampara_155.file_name [ Possiblevalues = [ "*" ] ]
+}
+}
+StateTransition {
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.suspend
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.disconnected
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.reset
+currentState GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.ok
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.maintenance
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.shutdown
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand GSB.BEAMCTL1.halt_128 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.suspend
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.disconnected
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.reset
+currentState GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.ok
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.maintenance
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.shutdown
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand GSB.BEAMCTL1.beamsetup_132 {
+CommandValidation {
+Validation {
+GSB.BEAMCTL1.beamsetup_132.integ [ MaxValue = 64 MinValue = 1 ]
+GSB.BEAMCTL1.beamsetup_132.samptime [ Possiblevalues = [ 512.0 ] ]
+GSB.BEAMCTL1.beamsetup_132.gps_int [ MaxValue = 300000000 MinValue = 0 ]
+GSB.BEAMCTL1.beamsetup_132.out_clk [ MaxValue = 5 MinValue = 0 ]
+GSB.BEAMCTL1.beamsetup_132.validedg [ MaxValue = 5 MinValue = 0 ]
+GSB.BEAMCTL1.beamsetup_132.gpsedge [ MaxValue = 10 MinValue = 0 ]
+GSB.BEAMCTL1.beamsetup_132.date_obs [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.beamsetup_132.observer [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.beamsetup_132.code [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.beamsetup_132.time_int [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] [ 4 ] ]
+GSB.BEAMCTL1.beamsetup_132.freq_integ [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] [ 4 ] [ 8 ] [ 16 ] ]
+GSB.BEAMCTL1.beamsetup_132.op_short [ Possiblevalues = [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.beamsetup_132.bitpack [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] ]
+GSB.BEAMCTL1.beamsetup_132.bitsnos [ Possiblevalues = [ 16 ] [ 32 ] ]
+GSB.BEAMCTL1.beamsetup_132.lsbbit [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] ]
+GSB.BEAMCTL1.beamsetup_132.smpwinsz [ Possiblevalues = [ 2048 ] [ 4096 ] ]
+GSB.BEAMCTL1.beamsetup_132.fltr_flg [ Possiblevalues = [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.beamsetup_132.fltr_dat [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] ]
+GSB.BEAMCTL1.beamsetup_132.fft_len [ Possiblevalues = [ 8192 ] [ 16384 ] ]
+GSB.BEAMCTL1.beamsetup_132.bands [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] [ 3 ] [ 4 ] ]
+GSB.BEAMCTL1.beamsetup_132.rf [ Possiblevalues = [ 0 ] [ 150 ] [ 244 ] [ 325 ] [ 610 ] [ 1420 ] ]
+GSB.BEAMCTL1.beamsetup_132.de_disp [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.beamsetup_132.DM [ MaxValue = 100 MinValue = 0 ]
+GSB.BEAMCTL1.beamsetup_132.BW [ Possiblevalues = [ 6 ] [ 16 ] [ 32 ] ]
+GSB.BEAMCTL1.beamsetup_132.band [ Possiblevalues = [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.beamsetup_132.ref_ch [ Possiblevalues = [ 256 ] [ 512 ] ]
+GSB.BEAMCTL1.beamsetup_132.fold_flg [ Possiblevalues = [ false ] [ false ] ]
+GSB.BEAMCTL1.beamsetup_132.period [ MaxValue = 10 MinValue = 0 ]
+GSB.BEAMCTL1.beamsetup_132.pol1_mask [ MaxValue = "FFFFFFFF" MinValue = "0" ]
+GSB.BEAMCTL1.beamsetup_132.pol2_mask [ MaxValue = "FFFFFFFF" MinValue = "0" ]
+GSB.BEAMCTL1.beamsetup_132.base_integ [ MaxValue = 100.0 MinValue = 0.0 ]
+}
+}
+StateTransition {
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.suspend
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.disconnected
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.reset
+currentState GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.ok
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.maintenance
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.shutdown
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand GSB.BEAMCTL1.beamfinish_179 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.suspend
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.disconnected
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.reset
+currentState GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.ok
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.maintenance
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.shutdown
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand GSB.BEAMCTL1.corrconfig_122 {
+CommandValidation {
+Validation {
+GSB.BEAMCTL1.corrconfig_122.GSB_MODE [ Possiblevalues = [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.corrconfig_122.GSB_LTA [ Possiblevalues = [ 1 ] [ 2 ] [ 4 ] [ 8 ] ]
+GSB.BEAMCTL1.corrconfig_122.GSB_ACQ_BW [ Possiblevalues = [ 16.666666 ] [ 33.333332 ] ]
+GSB.BEAMCTL1.corrconfig_122.GSB_FINAL_BW [ Possiblevalues = [ 0 ] [ 4 ] [ 8 ] [ 16 ] [ 32 ] [ 64 ] [ 128 ] ]
+GSB.BEAMCTL1.corrconfig_122.GSB_EDGE_FRQ [ Possiblevalues = [ 0 ] ]
+GSB.BEAMCTL1.corrconfig_122.GSB_CHAN_MAX [ Possiblevalues = [ 32 ] [ 64 ] [ 128 ] [ 256 ] [ 512 ] ]
+GSB.BEAMCTL1.corrconfig_122.GSB_CHAN_NUM [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.corrconfig_122.GSB_STOKES [ Possiblevalues = [ 2 ] [ 4 ] ]
+GSB.BEAMCTL1.corrconfig_122.GSB_CNTRL [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] ]
+GSB.BEAMCTL1.corrconfig_122.GSB_FSTOP [ Possiblevalues = [ false ] [ false ] ]
+GSB.BEAMCTL1.corrconfig_122.GSB_BEAM_1 [ Possiblevalues = [ "0:1" ] [ "1:1" ] [ "2:1" ] [ "3:1" ] [ "0:2" ] [ "1:2" ] [ "2:2" ] [ "3:2" ] ]
+GSB.BEAMCTL1.corrconfig_122.GSB_BEAM_2 [ Possiblevalues = [ "0:1" ] [ "1:1" ] [ "2:1" ] [ "3:1" ] [ "0:2" ] [ "1:2" ] [ "2:2" ] [ "3:2" ] ]
+GSB.BEAMCTL1.corrconfig_122.GSB_GAINEQ [ Possiblevalues = [ false ] [ false ] ]
+GSB.BEAMCTL1.corrconfig_122.GSB_BB_LO [ Possiblevalues = [ "149000000.0:156000000.0" ] [ "138000000.0:167000000.0" ] [ "133000000.0:172000000.0" ] ]
+GSB.BEAMCTL1.corrconfig_122.GSB_HOSTS [ Possiblevalues = [ "0" ] [ "1" ] [ "2" ] ]
+GSB.BEAMCTL1.corrconfig_122.GSB_CD_MODE [ Possiblevalues = [ false ] [ false ] ]
+GSB.BEAMCTL1.corrconfig_122.pantmask [ MaxValue = "FFFFFFFF" MinValue = "0" ]
+GSB.BEAMCTL1.corrconfig_122.corrmask [ Possiblevalues = [ 8 ] [ 12 ] ]
+GSB.BEAMCTL1.corrconfig_122.bandmask [ Possiblevalues = [ 3 ] [ 12 ] [ 15 ] ]
+GSB.BEAMCTL1.corrconfig_122.file_name [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.corrconfig_122.gsb_ifr_dataserver [ Possiblevalues = [ "gsbm4" ] [ "gsbm2" ] ]
+GSB.BEAMCTL1.corrconfig_122.gsb_beam1_dataserver [ Possiblevalues = [ "node_33" ] [ "node_47" ] [ "node_52" ] ]
+GSB.BEAMCTL1.corrconfig_122.gsb_beam2_dataserver [ Possiblevalues = [ "node_34" ] [ "node_48" ] [ "node_53" ] ]
+GSB.BEAMCTL1.corrconfig_122.GSB_FREQ [ Possiblevalues = [ 306.0 ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_MODE [ Possiblevalues = [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_LTA [ Possiblevalues = [ 1 ] [ 2 ] [ 4 ] [ 8 ] [ 16 ] [ 32 ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_ACQ_BW [ Possiblevalues = [ 400.0 ] [ 200.0 ] [ 100.0 ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_FINAL_BW [ Possiblevalues = [ 1 ] [ 2 ] [ 4 ] [ 8 ] [ 16 ] [ 32 ] [ 64 ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_EDGE_FRQ [ Possiblevalues = [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_CHAN_MAX [ Possiblevalues = [ 1024 ] [ 2048 ] [ 4096 ] [ 8192 ] [ 16384 ] [ 512 ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_CHAN_NUM [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_STOKES [ Possiblevalues = [ 2 ] [ 4 ] [ 1 ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_CNTRL [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_FSTOP [ Possiblevalues = [ false ] [ false ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_BEAM_1 [ Possiblevalues = [ "0:1" ] [ "1:1" ] [ "2:1" ] [ "3:1" ] [ "0:4" ] [ "1:4" ] [ "2:4" ] [ "3:4" ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_BEAM_2 [ Possiblevalues = [ "0:1" ] [ "1:1" ] [ "2:1" ] [ "3:1" ] [ "0:4" ] [ "1:4" ] [ "2:4" ] [ "3:4" ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_BEAM_3 [ Possiblevalues = [ "0:1" ] [ "1:1" ] [ "2:1" ] [ "3:1" ] [ "0:4" ] [ "1:4" ] [ "2:4" ] [ "3:4" ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_BEAM_4 [ Possiblevalues = [ "0:1" ] [ "1:1" ] [ "2:1" ] [ "3:1" ] [ "0:4" ] [ "1:4" ] [ "2:4" ] [ "3:4" ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_BM_INT [ Possiblevalues = [ 256 ] [ 128 ] [ 64 ] [ 32 ] [ 16 ] [ 8 ] [ 4 ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_GAINEQ [ Possiblevalues = [ false ] [ false ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_TPA [ Possiblevalues = [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_BITS [ Possiblevalues = [ 4 ] [ 8 ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_FILRFI [ Possiblevalues = [ 0 ] [ 1 ] [ 2 ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_BEAM_S [ Possiblevalues = [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_HOSTS [ Possiblevalues = [ "0" ] [ "1" ] [ "2" ] ]
+GSB.BEAMCTL1.corrconfig_122.gpu_beam3_dataserver [ Possiblevalues = [ "gwbh9" ] ]
+GSB.BEAMCTL1.corrconfig_122.gpu_beam4_dataserver [ Possiblevalues = [ "gwbh10" ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_RF1 [ MaxValue = 1550.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_RF2 [ MaxValue = 1550.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_LO1_1 [ MaxValue = 1600.0 MinValue = 100.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_LO2_1 [ MaxValue = 1600.0 MinValue = 100.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_DDC [ Possiblevalues = [ 0 ] [ 1 ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_DDCLO1 [ MaxValue = 1600.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_DDCLO2 [ MaxValue = 1600.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_SIDEBAND [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_RF1_1 [ MaxValue = 1550.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_RF1_2 [ MaxValue = 1550.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_DDCLO1_1 [ MaxValue = 1600.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_DDCLO1_2 [ MaxValue = 1600.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_SB1 [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.corrconfig_122.GCODE1 [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_RF2_1 [ MaxValue = 1550.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_RF2_2 [ MaxValue = 1550.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_DDCLO2_1 [ MaxValue = 1600.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_DDCLO2_2 [ MaxValue = 1600.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_SB2 [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.corrconfig_122.GCODE2 [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_RF3_1 [ MaxValue = 1550.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_RF3_2 [ MaxValue = 1550.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_DDCLO3_1 [ MaxValue = 1600.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_DDCLO3_2 [ MaxValue = 1600.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_SB3 [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.corrconfig_122.GCODE3 [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_RF4_1 [ MaxValue = 1550.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_RF4_2 [ MaxValue = 1550.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_DDCLO4_1 [ MaxValue = 1600.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_DDCLO4_2 [ MaxValue = 1600.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_SB4 [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.corrconfig_122.GCODE4 [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.corrconfig_122.GPU_RF5_1 [ MaxValue = 1550.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_RF5_2 [ MaxValue = 1550.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_DDCLO5_1 [ MaxValue = 1600.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_DDCLO5_2 [ MaxValue = 1600.0 MinValue = 0.0 ]
+GSB.BEAMCTL1.corrconfig_122.GPU_SB5 [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.corrconfig_122.GCODE5 [ Possiblevalues = [ "*" ] ]
+GSB.BEAMCTL1.corrconfig_122.gpu_beam1_dataserver [ Possiblevalues = [ "gwbh7" ] ]
+GSB.BEAMCTL1.corrconfig_122.gpu_beam2_dataserver [ Possiblevalues = [ "gwbh8" ] ]
+GSB.BEAMCTL1.corrconfig_122.gpu_ifr_dataserver [ Possiblevalues = [ "gwbh6" ] [ "gsbm4" ] ]
+}
+}
+StateTransition {
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.suspend
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.disconnected
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.reset
+currentState GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.ok
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.shutdown => nextState GSB.BEAMCTL1.maintenance
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.timeout , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.shutdown
+currentState GSB.BEAMCTL1.ok , GSB.BEAMCTL1.reset , GSB.BEAMCTL1.suspend , GSB.BEAMCTL1.maintenance , GSB.BEAMCTL1.shutdown , GSB.BEAMCTL1.disconnected => nextState GSB.BEAMCTL1.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 60 }
+} } }

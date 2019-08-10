@@ -1,0 +1,41 @@
+DeviceModel db__alarms
+InterfaceDescription 7 ALARM uses hdb.ARCHIVER {
+roleDetails
+{ RoleId= 1 , RoleName= "Lmc Engineer" , AllowedUserNumber= 2 RoleId=7 ,RoleName="utgh" ,AllowedUserNumber=2}
+privilegeDetails
+{ PrivilegeId= 1 , PrivilegeName= lmc_engineer_write }
+TangoDetails { DeviceId = 7 , DomainName = test , FamilyName = ^alarms , TangoMember = "1" , HostName = ngmnc }
+commands {
+	start[hwId =0, cmdPkt =0, int flg = 3, float gfdh=9]
+	stop[hwId =0, cmdPkt =0, int falg =0, float dig=4.0, long sim=1321, hex asd="FFFF", preciseangle Az_Angle = "100:00:00", precisetime ra_mean = "(12:00:00.00)", short sh = 12, boolean flag= false ]
+}
+
+operatingStates
+{
+operationalManual , operationalAutomatic , maintenance , suspend , shutdown , initialisation
+}
+}
+ControlNode A1 implements interface db__alarms.ALARM {
+	DeviceCommandResponseBlock{
+		DeviceCommand db__alarms.ALARM.start{
+			CommandValidation{
+				Validation{
+					db__alarms.ALARM.start.flg[]
+				}
+			}
+		}
+		DeviceCommand db__alarms.ALARM.stop{
+			StateTransition{
+				currentState db__alarms.ALARM.operationalManual , db__alarms.ALARM.operationalAutomatic , db__alarms.ALARM.maintenance , db__alarms.ALARM.shutdown , db__alarms.ALARM.initialisation, db__alarms.ALARM.initialisation => nextState db__alarms.ALARM.suspend
+			}
+			CommandValidation{ 
+				Validation{
+					db__alarms.ALARM.stop.dig[]
+				}
+			}
+			
+		}
+		
+		
+	}
+}

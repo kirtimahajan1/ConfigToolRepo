@@ -1,0 +1,6 @@
+DeviceModel BATCH
+InterfaceDescription 9 BATCH {
+TangoDetails { DeviceId = 98 , DomainName = MNC , FamilyName = BATCH , TangoMember = GAB_E05 , HostName = gablmc }
+ioReferenceDetails { ReferenceId= 36 , ReferenecName= GAB_E05 } }
+ControlNode GAB_E05 implements interface BATCH.BATCH {
+}

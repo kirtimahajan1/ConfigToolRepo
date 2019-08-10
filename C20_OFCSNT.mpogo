@@ -1,0 +1,156 @@
+DeviceModel C20
+InterfaceDescription 5 OFCSNT {
+roleDetails
+{ RoleId= 5 , RoleName= "Ofcsnt Engineer" , AllowedUserNumber= 2 RoleId= 1 , RoleName= "Lmc Engineer" , AllowedUserNumber= 2 }
+privilegeDetails
+{ PrivilegeId= 5 , PrivilegeName= ofcsnt_engineer_write PrivilegeId= 1 , PrivilegeName= lmc_engineer_write }
+commands
+{ init_11 11 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 5 , PrivilegeName= ofcsnt_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+settime_12 12 [ hwId = 1 , cmdPkt = 1 , PrivilegeId= 5 , PrivilegeName= ofcsnt_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , datetime db__datetime = "2017-05-17 12:12:12" ]
+set_attn_13 13 [ hwId = 101 , cmdPkt = 2 , PrivilegeId= 5 , PrivilegeName= ofcsnt_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , float Ch1 = 0.0 , float Ch2 = 0.0 ]
+quit_14 14 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 5 , PrivilegeName= ofcsnt_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+setMaintenance_79 79 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 5 , PrivilegeName= ofcsnt_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+setReset_80 80 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 5 , PrivilegeName= ofcsnt_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+setDomonTimeInterval_121 121 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 5 , PrivilegeName= ofcsnt_engineer_write , short domonTimeInterval = 3 ]
+setShutdown_109 109 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 5 , PrivilegeName= ofcsnt_engineer_write ]
+}
+operatingStates
+{
+ok , reset , suspend , timeout , maintenance , shutdown , disconnected
+}
+TangoDetails { DeviceId = 5 , DomainName = LMC , FamilyName = C20 , TangoMember = OFCSNT , HostName = ngmnc }
+ioReferenceDetails { ReferenceId= 17 , ReferenecName= OFCSNT } }
+ControlNode OFCSNT implements interface C20.OFCSNT {
+DeviceCommandResponseBlock {
+DeviceCommand C20.OFCSNT.init_11 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.suspend
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.disconnected
+currentState C20.OFCSNT.ok , C20.OFCSNT.suspend , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.reset
+currentState C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown , C20.OFCSNT.disconnected => nextState C20.OFCSNT.ok
+currentState C20.OFCSNT.ok , C20.OFCSNT.suspend , C20.OFCSNT.shutdown => nextState C20.OFCSNT.maintenance
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.disconnected => nextState C20.OFCSNT.shutdown
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown , C20.OFCSNT.disconnected => nextState C20.OFCSNT.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.OFCSNT.settime_12 {
+CommandValidation {
+Validation {
+C20.OFCSNT.settime_12.db__datetime [ ]
+}
+}
+StateTransition {
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.suspend
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.disconnected
+currentState C20.OFCSNT.ok , C20.OFCSNT.suspend , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.reset
+currentState C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown , C20.OFCSNT.disconnected => nextState C20.OFCSNT.ok
+currentState C20.OFCSNT.ok , C20.OFCSNT.suspend , C20.OFCSNT.shutdown => nextState C20.OFCSNT.maintenance
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.disconnected => nextState C20.OFCSNT.shutdown
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown , C20.OFCSNT.disconnected => nextState C20.OFCSNT.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.OFCSNT.set_attn_13 {
+CommandValidation {
+Validation {
+C20.OFCSNT.set_attn_13.Ch1 [ MaxValue = 31.5 MinValue = 0.0 ]
+C20.OFCSNT.set_attn_13.Ch2 [ MaxValue = 31.5 MinValue = 0.0 ]
+}
+}
+StateTransition {
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.suspend
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.disconnected
+currentState C20.OFCSNT.ok , C20.OFCSNT.suspend , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.reset
+currentState C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown , C20.OFCSNT.disconnected => nextState C20.OFCSNT.ok
+currentState C20.OFCSNT.ok , C20.OFCSNT.suspend , C20.OFCSNT.shutdown => nextState C20.OFCSNT.maintenance
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.disconnected => nextState C20.OFCSNT.shutdown
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown , C20.OFCSNT.disconnected => nextState C20.OFCSNT.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.OFCSNT.quit_14 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.suspend
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.disconnected
+currentState C20.OFCSNT.ok , C20.OFCSNT.suspend , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.reset
+currentState C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown , C20.OFCSNT.disconnected => nextState C20.OFCSNT.ok
+currentState C20.OFCSNT.ok , C20.OFCSNT.suspend , C20.OFCSNT.shutdown => nextState C20.OFCSNT.maintenance
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.disconnected => nextState C20.OFCSNT.shutdown
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown , C20.OFCSNT.disconnected => nextState C20.OFCSNT.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.OFCSNT.setMaintenance_79 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.suspend
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.disconnected
+currentState C20.OFCSNT.ok , C20.OFCSNT.suspend , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.reset
+currentState C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown , C20.OFCSNT.disconnected => nextState C20.OFCSNT.ok
+currentState C20.OFCSNT.ok , C20.OFCSNT.suspend , C20.OFCSNT.shutdown => nextState C20.OFCSNT.maintenance
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.disconnected => nextState C20.OFCSNT.shutdown
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown , C20.OFCSNT.disconnected => nextState C20.OFCSNT.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand C20.OFCSNT.setReset_80 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.suspend
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.disconnected
+currentState C20.OFCSNT.ok , C20.OFCSNT.suspend , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.reset
+currentState C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown , C20.OFCSNT.disconnected => nextState C20.OFCSNT.ok
+currentState C20.OFCSNT.ok , C20.OFCSNT.suspend , C20.OFCSNT.shutdown => nextState C20.OFCSNT.maintenance
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.disconnected => nextState C20.OFCSNT.shutdown
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown , C20.OFCSNT.disconnected => nextState C20.OFCSNT.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand C20.OFCSNT.setDomonTimeInterval_121 {
+CommandValidation {
+Validation {
+C20.OFCSNT.setDomonTimeInterval_121.domonTimeInterval [ MaxValue = 64 MinValue = -1 ]
+}
+}
+StateTransition {
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.suspend
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.disconnected
+currentState C20.OFCSNT.ok , C20.OFCSNT.suspend , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.reset
+currentState C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown , C20.OFCSNT.disconnected => nextState C20.OFCSNT.ok
+currentState C20.OFCSNT.ok , C20.OFCSNT.suspend , C20.OFCSNT.shutdown => nextState C20.OFCSNT.maintenance
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.disconnected => nextState C20.OFCSNT.shutdown
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown , C20.OFCSNT.disconnected => nextState C20.OFCSNT.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.OFCSNT.setShutdown_109 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.suspend
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.disconnected
+currentState C20.OFCSNT.ok , C20.OFCSNT.suspend , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown => nextState C20.OFCSNT.reset
+currentState C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown , C20.OFCSNT.disconnected => nextState C20.OFCSNT.ok
+currentState C20.OFCSNT.ok , C20.OFCSNT.suspend , C20.OFCSNT.shutdown => nextState C20.OFCSNT.maintenance
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.timeout , C20.OFCSNT.maintenance , C20.OFCSNT.disconnected => nextState C20.OFCSNT.shutdown
+currentState C20.OFCSNT.ok , C20.OFCSNT.reset , C20.OFCSNT.suspend , C20.OFCSNT.maintenance , C20.OFCSNT.shutdown , C20.OFCSNT.disconnected => nextState C20.OFCSNT.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+} } }

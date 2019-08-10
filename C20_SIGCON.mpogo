@@ -1,0 +1,239 @@
+DeviceModel C20
+InterfaceDescription 35 SIGCON {
+roleDetails
+{ RoleId= 1 , RoleName= "Lmc Engineer" , AllowedUserNumber= 2 RoleId= 19 , RoleName= "Sigcon Engineer" , AllowedUserNumber= 2 }
+privilegeDetails
+{ PrivilegeId= 1 , PrivilegeName= lmc_engineer_write PrivilegeId= 26 , PrivilegeName= sigcon_engineer_write }
+commands
+{ setilo_181 181 [ hwId = 0 , cmdPkt = 2 , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , PrivilegeId= 26 , PrivilegeName= sigcon_engineer_write , float ILO_ch1 = 540.0 , float ILO_ch2 = 540.0 ]
+setif_182 182 [ hwId = 0 , cmdPkt = 8 , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , PrivilegeId= 26 , PrivilegeName= sigcon_engineer_write , float pre_attn_ch1 = 7.0 , float pre_attn_ch2 = 7.0 , float post_gain_ch1 = 12.0 , float post_gain_ch2 = 12.0 , short IFBW_CH1 = 32 , short IFBW_CH2 = 32 , boolean IFALC_CH1 = false , boolean IFALC_CH2 = false ]
+setsigcon_183 183 [ hwId = 0 , cmdPkt = 10 , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , PrivilegeId= 26 , PrivilegeName= sigcon_engineer_write , float ILO_ch1 = 540.0 , float ILO_ch2 = 540.0 , float pre_attn_ch1 = 7.0 , float pre_attn_ch2 = 7.0 , float post_gain_ch1 = 12.0 , float post_gain_ch2 = 12.0 , short IFBW_CH1 = 32 , short IFBW_CH2 = 32 , boolean IFALC_CH1 = false , boolean IFALC_CH2 = false ]
+setifatten_184 184 [ hwId = 0 , cmdPkt = 4 , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , PrivilegeId= 26 , PrivilegeName= sigcon_engineer_write , float pre_attn_ch1 = 7.0 , float pre_attn_ch2 = 7.0 , float post_gain_ch1 = 12.0 , float post_gain_ch2 = 12.0 ]
+setofatten_185 185 [ hwId = 0 , cmdPkt = 2 , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , PrivilegeId= 26 , PrivilegeName= sigcon_engineer_write , float ofcatten_ch1 = 7.0 , float ofcatten_ch2 = 7.0 ]
+setMaintenance_79 79 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , PrivilegeId= 26 , PrivilegeName= sigcon_engineer_write ]
+setReset_80 80 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , PrivilegeId= 26 , PrivilegeName= sigcon_engineer_write ]
+setShutdown_109 109 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , PrivilegeId= 26 , PrivilegeName= sigcon_engineer_write ]
+setDomonTimeInterval_121 121 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , PrivilegeId= 26 , PrivilegeName= sigcon_engineer_write , short domonTimeInterval = 3 ]
+domon_164 164 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , PrivilegeId= 26 , PrivilegeName= sigcon_engineer_write , short domonTimeInterval = 3 ]
+srvrst_186 186 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , PrivilegeId= 26 , PrivilegeName= sigcon_engineer_write ]
+fpsrst_187 187 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , PrivilegeId= 26 , PrivilegeName= sigcon_engineer_write ]
+}
+operatingStates
+{
+ok , reset , suspend , timeout , maintenance , shutdown , disconnected
+}
+TangoDetails { DeviceId = 151 , DomainName = LMC , FamilyName = C20 , TangoMember = SIGCON , HostName = ngmnc }
+ioReferenceDetails { ReferenceId= 54 , ReferenecName= SIGCON } }
+ControlNode SIGCON implements interface C20.SIGCON {
+DeviceCommandResponseBlock {
+DeviceCommand C20.SIGCON.setilo_181 {
+CommandValidation {
+Validation {
+C20.SIGCON.setilo_181.ILO_ch1 [ MaxValue = 1600.0 MinValue = 100.0 ]
+C20.SIGCON.setilo_181.ILO_ch2 [ MaxValue = 1600.0 MinValue = 100.0 ]
+}
+}
+StateTransition {
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.suspend
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.disconnected
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.reset
+currentState C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.ok
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.shutdown => nextState C20.SIGCON.maintenance
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.disconnected => nextState C20.SIGCON.shutdown
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SIGCON.setif_182 {
+CommandValidation {
+Validation {
+C20.SIGCON.setif_182.pre_attn_ch1 [ MaxValue = 30.5 MinValue = 0.0 ]
+C20.SIGCON.setif_182.pre_attn_ch2 [ MaxValue = 30.5 MinValue = 0.0 ]
+C20.SIGCON.setif_182.post_gain_ch1 [ MaxValue = 30.5 MinValue = 0.0 ]
+C20.SIGCON.setif_182.post_gain_ch2 [ MaxValue = 30.5 MinValue = 0.0 ]
+C20.SIGCON.setif_182.IFBW_CH1 [ Possiblevalues = [ 32 ] [ 16 ] [ 6 ] ]
+C20.SIGCON.setif_182.IFBW_CH2 [ Possiblevalues = [ 32 ] [ 16 ] [ 6 ] ]
+C20.SIGCON.setif_182.IFALC_CH1 [ Possiblevalues = [ false ] [ false ] ]
+C20.SIGCON.setif_182.IFALC_CH2 [ Possiblevalues = [ false ] [ false ] ]
+}
+}
+StateTransition {
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.suspend
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.disconnected
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.reset
+currentState C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.ok
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.shutdown => nextState C20.SIGCON.maintenance
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.disconnected => nextState C20.SIGCON.shutdown
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SIGCON.setsigcon_183 {
+CommandValidation {
+Validation {
+C20.SIGCON.setsigcon_183.ILO_ch1 [ MaxValue = 1600.0 MinValue = 100.0 ]
+C20.SIGCON.setsigcon_183.ILO_ch2 [ MaxValue = 1600.0 MinValue = 100.0 ]
+C20.SIGCON.setsigcon_183.pre_attn_ch1 [ MaxValue = 30.5 MinValue = 0.0 ]
+C20.SIGCON.setsigcon_183.pre_attn_ch2 [ MaxValue = 30.5 MinValue = 0.0 ]
+C20.SIGCON.setsigcon_183.post_gain_ch1 [ MaxValue = 30.5 MinValue = 0.0 ]
+C20.SIGCON.setsigcon_183.post_gain_ch2 [ MaxValue = 30.5 MinValue = 0.0 ]
+C20.SIGCON.setsigcon_183.IFBW_CH1 [ Possiblevalues = [ 32 ] [ 16 ] [ 6 ] ]
+C20.SIGCON.setsigcon_183.IFBW_CH2 [ Possiblevalues = [ 32 ] [ 16 ] [ 6 ] ]
+C20.SIGCON.setsigcon_183.IFALC_CH1 [ Possiblevalues = [ false ] [ false ] ]
+C20.SIGCON.setsigcon_183.IFALC_CH2 [ Possiblevalues = [ false ] [ false ] ]
+}
+}
+StateTransition {
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.suspend
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.disconnected
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.reset
+currentState C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.ok
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.shutdown => nextState C20.SIGCON.maintenance
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.disconnected => nextState C20.SIGCON.shutdown
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SIGCON.setifatten_184 {
+CommandValidation {
+Validation {
+C20.SIGCON.setifatten_184.pre_attn_ch1 [ MaxValue = 30.5 MinValue = 0.0 ]
+C20.SIGCON.setifatten_184.pre_attn_ch2 [ MaxValue = 30.5 MinValue = 0.0 ]
+C20.SIGCON.setifatten_184.post_gain_ch1 [ MaxValue = 30.5 MinValue = 0.0 ]
+C20.SIGCON.setifatten_184.post_gain_ch2 [ MaxValue = 30.5 MinValue = 0.0 ]
+}
+}
+StateTransition {
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.suspend
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.disconnected
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.reset
+currentState C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.ok
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.shutdown => nextState C20.SIGCON.maintenance
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.disconnected => nextState C20.SIGCON.shutdown
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SIGCON.setofatten_185 {
+CommandValidation {
+Validation {
+C20.SIGCON.setofatten_185.ofcatten_ch1 [ MaxValue = 15.0 MinValue = 0.0 ]
+C20.SIGCON.setofatten_185.ofcatten_ch2 [ MaxValue = 15.0 MinValue = 0.0 ]
+}
+}
+StateTransition {
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.suspend
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.disconnected
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.reset
+currentState C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.ok
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.shutdown => nextState C20.SIGCON.maintenance
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.disconnected => nextState C20.SIGCON.shutdown
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SIGCON.setMaintenance_79 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.suspend
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.disconnected
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.reset
+currentState C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.ok
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.shutdown => nextState C20.SIGCON.maintenance
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.disconnected => nextState C20.SIGCON.shutdown
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand C20.SIGCON.setReset_80 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.suspend
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.disconnected
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.reset
+currentState C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.ok
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.shutdown => nextState C20.SIGCON.maintenance
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.disconnected => nextState C20.SIGCON.shutdown
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand C20.SIGCON.setShutdown_109 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.suspend
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.disconnected
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.reset
+currentState C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.ok
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.shutdown => nextState C20.SIGCON.maintenance
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.disconnected => nextState C20.SIGCON.shutdown
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand C20.SIGCON.setDomonTimeInterval_121 {
+CommandValidation {
+Validation {
+C20.SIGCON.setDomonTimeInterval_121.domonTimeInterval [ MaxValue = 64 MinValue = -1 ]
+}
+}
+StateTransition {
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.suspend
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.disconnected
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.reset
+currentState C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.ok
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.shutdown => nextState C20.SIGCON.maintenance
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.disconnected => nextState C20.SIGCON.shutdown
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SIGCON.domon_164 {
+CommandValidation {
+Validation {
+C20.SIGCON.domon_164.domonTimeInterval [ MaxValue = 64 MinValue = -1 ]
+}
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SIGCON.srvrst_186 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.suspend
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.disconnected
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.reset
+currentState C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.ok
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.shutdown => nextState C20.SIGCON.maintenance
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.disconnected => nextState C20.SIGCON.shutdown
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SIGCON.fpsrst_187 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.suspend
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.disconnected
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown => nextState C20.SIGCON.reset
+currentState C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.ok
+currentState C20.SIGCON.ok , C20.SIGCON.suspend , C20.SIGCON.shutdown => nextState C20.SIGCON.maintenance
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.timeout , C20.SIGCON.maintenance , C20.SIGCON.disconnected => nextState C20.SIGCON.shutdown
+currentState C20.SIGCON.ok , C20.SIGCON.reset , C20.SIGCON.suspend , C20.SIGCON.maintenance , C20.SIGCON.shutdown , C20.SIGCON.disconnected => nextState C20.SIGCON.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+} } }

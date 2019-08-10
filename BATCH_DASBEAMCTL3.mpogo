@@ -1,0 +1,6 @@
+DeviceModel BATCH
+InterfaceDescription 9 BATCH {
+TangoDetails { DeviceId = 135 , DomainName = MNC , FamilyName = BATCH , TangoMember = DASBEAMCTL3 , HostName = gwb }
+ioReferenceDetails { ReferenceId= 52 , ReferenecName= DASBEAMCTL3 } }
+ControlNode DASBEAMCTL3 implements interface BATCH.BATCH {
+}

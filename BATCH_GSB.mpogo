@@ -1,0 +1,6 @@
+DeviceModel BATCH
+InterfaceDescription 9 BATCH {
+TangoDetails { DeviceId = 65 , DomainName = MNC , FamilyName = BATCH , TangoMember = GSB , HostName = lmccorr }
+}
+ControlNode GSB implements interface BATCH.BATCH {
+}

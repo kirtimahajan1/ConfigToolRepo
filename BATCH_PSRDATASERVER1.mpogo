@@ -1,0 +1,6 @@
+DeviceModel BATCH
+InterfaceDescription 9 BATCH {
+TangoDetails { DeviceId = 71 , DomainName = MNC , FamilyName = BATCH , TangoMember = PSRDATASERVER1 , HostName = lmccorr }
+ioReferenceDetails { ReferenceId= 6 , ReferenecName= PSRDATASERVER1 } }
+ControlNode PSRDATASERVER1 implements interface BATCH.BATCH {
+}

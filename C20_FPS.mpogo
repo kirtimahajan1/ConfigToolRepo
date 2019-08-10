@@ -1,0 +1,684 @@
+DeviceModel C20
+InterfaceDescription 4 FPS {
+roleDetails
+{ RoleId= 4 , RoleName= "Fps Engineer" , AllowedUserNumber= 2 RoleId= 1 , RoleName= "Lmc Engineer" , AllowedUserNumber= 2 }
+privilegeDetails
+{ PrivilegeId= 4 , PrivilegeName= fps_engineer_write PrivilegeId= 1 , PrivilegeName= lmc_engineer_write }
+commands
+{ set_tng_pnt_17 17 [ hwId = 0 , cmdPkt = 1 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , float tng_pnt = 0.0 ]
+set_rmp_dncnt_18 18 [ hwId = 1 , cmdPkt = 1 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short slope = 0 ]
+set_rmp_upcnt_19 19 [ hwId = 2 , cmdPkt = 1 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short slope = 0 ]
+set_lrpm_lmt_20 20 [ hwId = 4 , cmdPkt = 1 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , float low_rpm_lmt = 550.0 ]
+set_brkcnt_diff_21 21 [ hwId = 5 , cmdPkt = 1 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short brk_cnt_diff = 6 ]
+set_rpm_upcnt_22 22 [ hwId = 7 , cmdPkt = 1 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short slope = 0 ]
+set_max_ang_23 23 [ hwId = 8 , cmdPkt = 1 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , float max_angle = 17000.0 ]
+set_min_ang_24 24 [ hwId = 9 , cmdPkt = 1 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , float min_angle = 500.0 ]
+set_max_pwm_25 25 [ hwId = 10 , cmdPkt = 1 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , float max_pwm = 0.0 ]
+rd_tng_pnt_26 26 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+rd_rmp_dncnt_27 27 [ hwId = 12 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+rd_lrpm_lmt_28 28 [ hwId = 13 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+rd_brkcnt_diff_29 29 [ hwId = 14 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+rd_rmp_upcnt_30 30 [ hwId = 15 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+rd_stop_cnt_31 31 [ hwId = 16 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+rd_max_ang_32 32 [ hwId = 17 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+rd_min_ang_33 33 [ hwId = 18 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+rd_max_pwm_34 34 [ hwId = 19 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+rd_version_35 35 [ hwId = 20 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+rd_ua0_ang_36 36 [ hwId = 21 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+calibrate_37 37 [ hwId = 22 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+runfree_38 38 [ hwId = 23 , cmdPkt = 1 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , boolean direction = false ]
+ua0calib_39 39 [ hwId = 24 , cmdPkt = 1 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , boolean direction = false ]
+runcpreset_40 40 [ hwId = 25 , cmdPkt = 1 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short target_encoder = 17000 ]
+rundpreset_41 41 [ hwId = 26 , cmdPkt = 1 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short target_angle = 270 ]
+finectune_42 42 [ hwId = 27 , cmdPkt = 2 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short target_encoder = 17000 , float max_pwm = 0.0 ]
+finedtune_43 43 [ hwId = 28 , cmdPkt = 2 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short target_angle = 270 , float max_pwm = 0.0 ]
+fpsboot_44 44 [ hwId = 29 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+fpsstop_45 45 [ hwId = 30 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+ldfpspos_46 46 [ hwId = 31 , cmdPkt = 4 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short db__150MHz = 10 , short db__375MHz = 20 , short db__700MHz = 30 , short db__1420MHz = 20 ]
+mvfps150_47 47 [ hwId = 32 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+mvfps375_48 48 [ hwId = 33 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+mvfps700_49 49 [ hwId = 34 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+mvfps1420_50 50 [ hwId = 35 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+setMaintenance_79 79 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+setReset_80 80 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+setDomonTimeInterval_121 121 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write , short domonTimeInterval = 3 ]
+setShutdown_109 109 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 4 , PrivilegeName= fps_engineer_write ]
+}
+operatingStates
+{
+ok , reset , suspend , timeout , maintenance , shutdown , disconnected
+}
+TangoDetails { DeviceId = 4 , DomainName = LMC , FamilyName = C20 , TangoMember = FPS , HostName = ngmnc }
+ioReferenceDetails { ReferenceId= 16 , ReferenecName= FPS } }
+ControlNode FPS implements interface C20.FPS {
+DeviceCommandResponseBlock {
+DeviceCommand C20.FPS.set_tng_pnt_17 {
+CommandValidation {
+Validation {
+C20.FPS.set_tng_pnt_17.tng_pnt [ MaxValue = 285.0 MinValue = -28.8 ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.set_rmp_dncnt_18 {
+CommandValidation {
+Validation {
+C20.FPS.set_rmp_dncnt_18.slope [ MaxValue = 200 MinValue = 0 ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.set_rmp_upcnt_19 {
+CommandValidation {
+Validation {
+C20.FPS.set_rmp_upcnt_19.slope [ MaxValue = 200 MinValue = 0 ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.set_lrpm_lmt_20 {
+CommandValidation {
+Validation {
+C20.FPS.set_lrpm_lmt_20.low_rpm_lmt [ MaxValue = 1000.0 MinValue = 0.0 ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.set_brkcnt_diff_21 {
+CommandValidation {
+Validation {
+C20.FPS.set_brkcnt_diff_21.brk_cnt_diff [ MaxValue = 10 MinValue = 5 ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.set_rpm_upcnt_22 {
+CommandValidation {
+Validation {
+C20.FPS.set_rpm_upcnt_22.slope [ MaxValue = 200 MinValue = 0 ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.set_max_ang_23 {
+CommandValidation {
+Validation {
+C20.FPS.set_max_ang_23.max_angle [ MaxValue = 18000.0 MinValue = 17000.0 ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.set_min_ang_24 {
+CommandValidation {
+Validation {
+C20.FPS.set_min_ang_24.min_angle [ MaxValue = 1500.0 MinValue = 500.0 ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.set_max_pwm_25 {
+CommandValidation {
+Validation {
+C20.FPS.set_max_pwm_25.max_pwm [ MaxValue = 100.0 MinValue = 0.0 ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.rd_tng_pnt_26 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.rd_rmp_dncnt_27 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.rd_lrpm_lmt_28 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.rd_brkcnt_diff_29 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.rd_rmp_upcnt_30 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.rd_stop_cnt_31 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.rd_max_ang_32 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.rd_min_ang_33 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.rd_max_pwm_34 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.rd_version_35 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.rd_ua0_ang_36 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.calibrate_37 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.runfree_38 {
+CommandValidation {
+Validation {
+C20.FPS.runfree_38.direction [ Possiblevalues = [ false ] [ false ] ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.ua0calib_39 {
+CommandValidation {
+Validation {
+C20.FPS.ua0calib_39.direction [ Possiblevalues = [ false ] [ false ] ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.runcpreset_40 {
+CommandValidation {
+Validation {
+C20.FPS.runcpreset_40.target_encoder [ MaxValue = 17853 MinValue = 615 ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.rundpreset_41 {
+CommandValidation {
+Validation {
+C20.FPS.rundpreset_41.target_angle [ MaxValue = 284 MinValue = -18 ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.finectune_42 {
+CommandValidation {
+Validation {
+C20.FPS.finectune_42.target_encoder [ MaxValue = 17853 MinValue = 615 ]
+C20.FPS.finectune_42.max_pwm [ MaxValue = 100.0 MinValue = 0.0 ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.finedtune_43 {
+CommandValidation {
+Validation {
+C20.FPS.finedtune_43.target_angle [ MaxValue = 284 MinValue = -18 ]
+C20.FPS.finedtune_43.max_pwm [ MaxValue = 100.0 MinValue = 0.0 ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.fpsboot_44 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.fpsstop_45 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.ldfpspos_46 {
+CommandValidation {
+Validation {
+C20.FPS.ldfpspos_46.db__150MHz [ MaxValue = 20480 MinValue = 0 ]
+C20.FPS.ldfpspos_46.db__375MHz [ MaxValue = 20480 MinValue = 0 ]
+C20.FPS.ldfpspos_46.db__700MHz [ MaxValue = 20480 MinValue = 0 ]
+C20.FPS.ldfpspos_46.db__1420MHz [ MaxValue = 20480 MinValue = 0 ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.mvfps150_47 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.mvfps375_48 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.mvfps700_49 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.mvfps1420_50 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.setMaintenance_79 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand C20.FPS.setReset_80 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand C20.FPS.setDomonTimeInterval_121 {
+CommandValidation {
+Validation {
+C20.FPS.setDomonTimeInterval_121.domonTimeInterval [ MaxValue = 64 MinValue = -1 ]
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FPS.setShutdown_109 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.suspend
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.disconnected
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown => nextState C20.FPS.reset
+currentState C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.ok
+currentState C20.FPS.ok , C20.FPS.suspend , C20.FPS.shutdown => nextState C20.FPS.maintenance
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.timeout , C20.FPS.maintenance , C20.FPS.disconnected => nextState C20.FPS.shutdown
+currentState C20.FPS.ok , C20.FPS.reset , C20.FPS.suspend , C20.FPS.maintenance , C20.FPS.shutdown , C20.FPS.disconnected => nextState C20.FPS.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+} } }

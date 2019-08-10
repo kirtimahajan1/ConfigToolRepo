@@ -1,0 +1,6 @@
+DeviceModel BATCH
+InterfaceDescription 9 BATCH {
+TangoDetails { DeviceId = 125 , DomainName = MNC , FamilyName = BATCH , TangoMember = CORRCTL1 , HostName = gwb }
+ioReferenceDetails { ReferenceId= 1 , ReferenecName= CORRCTL1 } }
+ControlNode CORRCTL1 implements interface BATCH.BATCH {
+}

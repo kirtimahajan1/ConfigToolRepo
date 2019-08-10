@@ -1,0 +1,6 @@
+DeviceModel BATCH
+InterfaceDescription 9 BATCH {
+TangoDetails { DeviceId = 152 , DomainName = MNC , FamilyName = BATCH , TangoMember = SIGCON , HostName = ngmnc }
+ioReferenceDetails { ReferenceId= 54 , ReferenecName= SIGCON } }
+ControlNode SIGCON implements interface BATCH.BATCH {
+}

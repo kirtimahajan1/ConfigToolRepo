@@ -1,0 +1,6 @@
+DeviceModel BATCH
+InterfaceDescription 9 BATCH {
+TangoDetails { DeviceId = 13 , DomainName = MNC , FamilyName = BATCH , TangoMember = C20 , HostName = ngmnc }
+}
+ControlNode C20 implements interface BATCH.BATCH {
+}

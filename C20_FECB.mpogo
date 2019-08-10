@@ -1,0 +1,446 @@
+DeviceModel C20
+InterfaceDescription 6 FECB {
+roleDetails
+{ RoleId= 6 , RoleName= "Fecb Engineer" , AllowedUserNumber= 2 RoleId= 1 , RoleName= "Lmc Engineer" , AllowedUserNumber= 2 }
+privilegeDetails
+{ PrivilegeId= 6 , PrivilegeName= fecb_engineer_write PrivilegeId= 1 , PrivilegeName= lmc_engineer_write }
+commands
+{ init_91 91 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+reset_62 62 [ hwId = 1 , cmdPkt = 0 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+setrfsys_63 63 [ hwId = 2 , cmdPkt = 10 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , long band_select_ch1 = 1420 , long band_select_ch2 = 1420 , short rf_swap = 0 , short sol_atten_ch1 = 0 , short sol_atten_ch2 = 0 , short fe_ngcal = 0 , short fe_walsh_sw = 0 , short fe_walsh_grp = 0 , long fe_ngcycle = 0 , short rfcm_sw = 1 ]
+sel_febox_64 64 [ hwId = 4 , cmdPkt = 2 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , long band_select_ch1 = 1420 , long band_select_ch2 = 1420 ]
+sel_ufebox_65 65 [ hwId = 5 , cmdPkt = 2 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , long band_select_ch1 = 1420 , long band_select_ch2 = 1420 ]
+rfswap_66 66 [ hwId = 6 , cmdPkt = 1 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short rf_swap = 0 ]
+rfattn_67 67 [ hwId = 7 , cmdPkt = 2 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short sol_atten_ch1 = 0 , short sol_atten_ch2 = 0 ]
+rfon_68 68 [ hwId = 8 , cmdPkt = 2 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short rf_on_ch1 = 1 , short rf_on_ch2 = 1 ]
+cbterm_69 69 [ hwId = 9 , cmdPkt = 2 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short sol_atten_ch1 = 0 , short sol_atten_ch2 = 0 ]
+rfterm_70 70 [ hwId = 10 , cmdPkt = 1 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short fe_ngcal = 0 ]
+rfngset_71 71 [ hwId = 11 , cmdPkt = 1 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short ngset = 0 ]
+rfngcal_72 72 [ hwId = 12 , cmdPkt = 1 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short fe_ngcal = 0 ]
+setwalsh_73 73 [ hwId = 13 , cmdPkt = 1 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short fe_walsh_sw = 0 ]
+setwalshgrp_74 74 [ hwId = 14 , cmdPkt = 1 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short fe_walsh_grp = 0 ]
+seturfsys_75 75 [ hwId = 15 , cmdPkt = 10 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , long band_select_ch1 = 1420 , long band_select_ch2 = 1420 , short rf_swap = 0 , short sol_atten_ch1 = 0 , short sol_atten_ch2 = 0 , short fe_ngcal = 0 , short fe_walsh_sw = 0 , short fe_walsh_grp = 0 , long fe_ngcycle = 0 , short rfcm_sw = 1 ]
+rfcm_sw_76 76 [ hwId = 16 , cmdPkt = 1 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short rfcm_sw = 1 ]
+rawmon_77 77 [ hwId = 17 , cmdPkt = 0 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+restore_78 78 [ hwId = 18 , cmdPkt = 0 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+setMaintenance_79 79 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+setReset_80 80 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+settime_88 88 [ hwId = 19 , cmdPkt = 1 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , datetime db__datetime = "2017-05-17 12:12:12" ]
+setShutdown_109 109 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write ]
+setDomonTimeInterval_121 121 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 6 , PrivilegeName= fecb_engineer_write , short domonTimeInterval = 3 ]
+}
+operatingStates
+{
+ok , reset , suspend , timeout , maintenance , shutdown , disconnected
+}
+TangoDetails { DeviceId = 6 , DomainName = LMC , FamilyName = C20 , TangoMember = FECB , HostName = ngmnc }
+ioReferenceDetails { ReferenceId= 18 , ReferenecName= FECB } }
+ControlNode FECB implements interface C20.FECB {
+DeviceCommandResponseBlock {
+DeviceCommand C20.FECB.init_91 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.reset_62 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.setrfsys_63 {
+CommandValidation {
+Validation {
+C20.FECB.setrfsys_63.band_select_ch1 [ Possiblevalues = [ 150 ] [ 190 ] [ 235 ] [ 290 ] [ 325 ] [ 350 ] [ 410 ] [ 470 ] [ 600 ] [ 610 ] [ 685 ] [ 725 ] [ 770 ] [ 850 ] [ 1060 ] [ 1170 ] [ 1280 ] [ 1390 ] [ 1420 ] ]
+C20.FECB.setrfsys_63.band_select_ch2 [ Possiblevalues = [ 150 ] [ 190 ] [ 235 ] [ 290 ] [ 325 ] [ 350 ] [ 410 ] [ 470 ] [ 600 ] [ 610 ] [ 685 ] [ 725 ] [ 770 ] [ 850 ] [ 1060 ] [ 1170 ] [ 1280 ] [ 1390 ] [ 1420 ] ]
+C20.FECB.setrfsys_63.rf_swap [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.FECB.setrfsys_63.sol_atten_ch1 [ Possiblevalues = [ -1 ] [ 0 ] [ 1 ] [ 14 ] [ 30 ] [ 44 ] ]
+C20.FECB.setrfsys_63.sol_atten_ch2 [ Possiblevalues = [ -1 ] [ 0 ] [ 1 ] [ 14 ] [ 30 ] [ 44 ] ]
+C20.FECB.setrfsys_63.fe_ngcal [ Possiblevalues = [ -1 ] [ 0 ] [ 1 ] [ 2 ] [ 3 ] ]
+C20.FECB.setrfsys_63.fe_walsh_sw [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.FECB.setrfsys_63.fe_walsh_grp [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.FECB.setrfsys_63.fe_ngcycle [ Possiblevalues = [ 0 ] [ 25 ] [ 50 ] [ 100 ] ]
+C20.FECB.setrfsys_63.rfcm_sw [ Possiblevalues = [ 0 ] [ 1 ] ]
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.sel_febox_64 {
+CommandValidation {
+Validation {
+C20.FECB.sel_febox_64.band_select_ch1 [ Possiblevalues = [ 150 ] [ 190 ] [ 235 ] [ 290 ] [ 325 ] [ 350 ] [ 410 ] [ 470 ] [ 600 ] [ 610 ] [ 685 ] [ 725 ] [ 770 ] [ 850 ] [ 1060 ] [ 1170 ] [ 1280 ] [ 1390 ] [ 1420 ] ]
+C20.FECB.sel_febox_64.band_select_ch2 [ Possiblevalues = [ 150 ] [ 190 ] [ 235 ] [ 290 ] [ 325 ] [ 350 ] [ 410 ] [ 470 ] [ 600 ] [ 610 ] [ 685 ] [ 725 ] [ 770 ] [ 850 ] [ 1060 ] [ 1170 ] [ 1280 ] [ 1390 ] [ 1420 ] ]
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.sel_ufebox_65 {
+CommandValidation {
+Validation {
+C20.FECB.sel_ufebox_65.band_select_ch1 [ Possiblevalues = [ 150 ] [ 190 ] [ 235 ] [ 290 ] [ 325 ] [ 350 ] [ 410 ] [ 470 ] [ 600 ] [ 610 ] [ 685 ] [ 725 ] [ 770 ] [ 850 ] [ 1060 ] [ 1170 ] [ 1280 ] [ 1390 ] [ 1420 ] ]
+C20.FECB.sel_ufebox_65.band_select_ch2 [ Possiblevalues = [ 150 ] [ 190 ] [ 235 ] [ 290 ] [ 325 ] [ 350 ] [ 410 ] [ 470 ] [ 600 ] [ 610 ] [ 685 ] [ 725 ] [ 770 ] [ 850 ] [ 1060 ] [ 1170 ] [ 1280 ] [ 1390 ] [ 1420 ] ]
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.rfswap_66 {
+CommandValidation {
+Validation {
+C20.FECB.rfswap_66.rf_swap [ Possiblevalues = [ 0 ] [ 1 ] ]
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.rfattn_67 {
+CommandValidation {
+Validation {
+C20.FECB.rfattn_67.sol_atten_ch1 [ Possiblevalues = [ -1 ] [ 0 ] [ 1 ] [ 14 ] [ 30 ] [ 44 ] ]
+C20.FECB.rfattn_67.sol_atten_ch2 [ Possiblevalues = [ -1 ] [ 0 ] [ 1 ] [ 14 ] [ 30 ] [ 44 ] ]
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.rfon_68 {
+CommandValidation {
+Validation {
+C20.FECB.rfon_68.rf_on_ch1 [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.FECB.rfon_68.rf_on_ch2 [ Possiblevalues = [ 0 ] [ 1 ] ]
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.cbterm_69 {
+CommandValidation {
+Validation {
+C20.FECB.cbterm_69.sol_atten_ch1 [ Possiblevalues = [ -1 ] [ 0 ] [ 1 ] [ 14 ] [ 30 ] [ 44 ] ]
+C20.FECB.cbterm_69.sol_atten_ch2 [ Possiblevalues = [ -1 ] [ 0 ] [ 1 ] [ 14 ] [ 30 ] [ 44 ] ]
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.rfterm_70 {
+CommandValidation {
+Validation {
+C20.FECB.rfterm_70.fe_ngcal [ Possiblevalues = [ -1 ] [ 0 ] [ 1 ] [ 2 ] [ 3 ] ]
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.rfngset_71 {
+CommandValidation {
+Validation {
+C20.FECB.rfngset_71.ngset [ Possiblevalues = [ 0 ] [ 1 ] ]
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.rfngcal_72 {
+CommandValidation {
+Validation {
+C20.FECB.rfngcal_72.fe_ngcal [ Possiblevalues = [ -1 ] [ 0 ] [ 1 ] [ 2 ] [ 3 ] ]
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.setwalsh_73 {
+CommandValidation {
+Validation {
+C20.FECB.setwalsh_73.fe_walsh_sw [ Possiblevalues = [ 0 ] [ 1 ] ]
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.setwalshgrp_74 {
+CommandValidation {
+Validation {
+C20.FECB.setwalshgrp_74.fe_walsh_grp [ Possiblevalues = [ 0 ] [ 1 ] ]
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.seturfsys_75 {
+CommandValidation {
+Validation {
+C20.FECB.seturfsys_75.band_select_ch1 [ Possiblevalues = [ 150 ] [ 190 ] [ 235 ] [ 290 ] [ 325 ] [ 350 ] [ 410 ] [ 470 ] [ 600 ] [ 610 ] [ 685 ] [ 725 ] [ 770 ] [ 850 ] [ 1060 ] [ 1170 ] [ 1280 ] [ 1390 ] [ 1420 ] ]
+C20.FECB.seturfsys_75.band_select_ch2 [ Possiblevalues = [ 150 ] [ 190 ] [ 235 ] [ 290 ] [ 325 ] [ 350 ] [ 410 ] [ 470 ] [ 600 ] [ 610 ] [ 685 ] [ 725 ] [ 770 ] [ 850 ] [ 1060 ] [ 1170 ] [ 1280 ] [ 1390 ] [ 1420 ] ]
+C20.FECB.seturfsys_75.rf_swap [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.FECB.seturfsys_75.sol_atten_ch1 [ Possiblevalues = [ -1 ] [ 0 ] [ 1 ] [ 14 ] [ 30 ] [ 44 ] ]
+C20.FECB.seturfsys_75.sol_atten_ch2 [ Possiblevalues = [ -1 ] [ 0 ] [ 1 ] [ 14 ] [ 30 ] [ 44 ] ]
+C20.FECB.seturfsys_75.fe_ngcal [ Possiblevalues = [ -1 ] [ 0 ] [ 1 ] [ 2 ] [ 3 ] ]
+C20.FECB.seturfsys_75.fe_walsh_sw [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.FECB.seturfsys_75.fe_walsh_grp [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.FECB.seturfsys_75.fe_ngcycle [ Possiblevalues = [ 0 ] [ 25 ] [ 50 ] [ 100 ] ]
+C20.FECB.seturfsys_75.rfcm_sw [ Possiblevalues = [ 0 ] [ 1 ] ]
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.rfcm_sw_76 {
+CommandValidation {
+Validation {
+C20.FECB.rfcm_sw_76.rfcm_sw [ Possiblevalues = [ 0 ] [ 1 ] ]
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.rawmon_77 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.restore_78 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.setMaintenance_79 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand C20.FECB.setReset_80 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand C20.FECB.settime_88 {
+CommandValidation {
+Validation {
+C20.FECB.settime_88.db__datetime [ ]
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.FECB.setShutdown_109 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand C20.FECB.setDomonTimeInterval_121 {
+CommandValidation {
+Validation {
+C20.FECB.setDomonTimeInterval_121.domonTimeInterval [ MaxValue = 64 MinValue = -1 ]
+}
+}
+StateTransition {
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.suspend
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.disconnected
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown => nextState C20.FECB.reset
+currentState C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.ok
+currentState C20.FECB.ok , C20.FECB.suspend , C20.FECB.shutdown => nextState C20.FECB.maintenance
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.timeout , C20.FECB.maintenance , C20.FECB.disconnected => nextState C20.FECB.shutdown
+currentState C20.FECB.ok , C20.FECB.reset , C20.FECB.suspend , C20.FECB.maintenance , C20.FECB.shutdown , C20.FECB.disconnected => nextState C20.FECB.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+} } }

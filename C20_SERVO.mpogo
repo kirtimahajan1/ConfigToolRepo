@@ -1,0 +1,876 @@
+DeviceModel C20
+InterfaceDescription 3 SERVO {
+roleDetails
+{ RoleId= 3 , RoleName= "Servo Engineer" , AllowedUserNumber= 2 RoleId= 1 , RoleName= "Lmc Engineer" , AllowedUserNumber= 2 }
+privilegeDetails
+{ PrivilegeId= 3 , PrivilegeName= servo_engineer_write PrivilegeId= 1 , PrivilegeName= lmc_engineer_write }
+commands
+{ position_1 1 [ hwId = 66 , cmdPkt = 3 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , string Axis = "B" , preciseangle Az_Angle = "100:00:00" , preciseangle El_Angle = "90:00:00" ]
+position_2 2 [ hwId = 66 , cmdPkt = 2 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , string Axis = "B" , preciseangle Az_Angle = "100:00:00" ]
+hold_3 3 [ hwId = 70 , cmdPkt = 1 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , string Axis = "B" ]
+stop_4 4 [ hwId = 72 , cmdPkt = 1 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , string Axis = "B" ]
+stow_5 5 [ hwId = 76 , cmdPkt = 1 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , string Axis = "E"]
+stowrelease_6 6 [ hwId = 78 , cmdPkt = 1 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , string Axis = "E" ]
+abort_7 7 [ hwId = 80 , cmdPkt = 0 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+setMaintenance_79 79 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+setReset_80 80 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+position_86 86 [ hwId = 66 , cmdPkt = 2 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , string Axis = "E" , preciseangle El_Angle = "90:00:00" ]
+park_87 87 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+initSrv_92 92 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+init_ant_para_93 93 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+init_src_para_94 94 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+set_src_para_95 95 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , string source_name = "NGPOLE" , precisetime ra_mean = "(12:00:00.00)" , preciseangle dec_mean = "27:00:00.00" , float epoch = 1900.5 , float ra_app = 0.0 , float dec_app = 0.0 , float target_epoch = 2000.0 , float ra_offset = 0.0 , float dra = 0.0 , float dec_offset = 0.0 , float ddec = 0.0 , float dradec_reftime = 0.0 , float az_offset = 0.0 , float daz = 0.0 , float el_offset = 0.0 , float del = 0.0 , float dazel_reftime = 0.0 , float curr_time = 0.0 , float trkDuration = 12.0 , float length = 0.0 , float scan_dra = 0.0 , float scan_ddec = 0.0 , float scan_daz = 0.0 , float scan_del = 0.0 ]
+set_ant_para_96 96 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , float azcorr = 0.0 , float elcorr = 0.0 , float elmin = 20.0 , float elmax = 110.0 , float azmin = -260.0 , float azmax = 255.0 , short trkflag = 0 , short trkon = 0 , float timezone = 5.5 , float lat = 19.1 , float longitude = 74.05 , float longcorr = 0.0 ]
+set_track_path_97 97 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , short trkflag = 0 ]
+stop_track_98 98 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write ]
+track_object_99 99 [ hwId = 68 , cmdPkt = 4 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , string Axis = "B" , string source_name = "NGPOLE" , short outtrk = 0 , short cmdid = 0 , float trkDuration = 12.0 , precisetime ra_mean = "(12:00:00.00)" , preciseangle dec_mean = "27:00:00.00" , float epoch = 1900.5 , float ra_app = 0.0 , float dec_app = 0.0 , float target_epoch = 2000.0 , float ra_offset = 0.0 , float dra = 0.0 , float dec_offset = 0.0 , float ddec = 0.0 , float dradec_reftime = 0.0 , float az_offset = 0.0 , float daz = 0.0 , float el_offset = 0.0 , float del = 0.0 , float dazel_reftime = 0.0 , float curr_time = 0.0 , short trkflag = 0 , short trkon = 0 , float timezone = 5.5 , float lat = 19.1 , float longitude = 74.05 , float longcorr = 0.0 , float azcorr = 0.0 , float elcorr = 0.0 , float elmin = 20.0 , float elmax = 110.0 , float azmin = -260.0 , float azmax = 255.0 , float scan_dra = 0.0 , float scan_ddec = 0.0 , float scan_daz = 0.0 , float scan_del = 0.0 , float length = 0.0 , float trkTimer = 0.0 , float az = 100.0 , float az_gmrt = 100.0 , float el = 90.0 , float el_gmrt = 90.0 , float lctrise = 0.0 , float lctset = 0.0 ]
+track_off_az_el_100 100 [ hwId = 68 , cmdPkt = 4 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , string Axis = "B" , string source_name = "NGPOLE" , short outtrk = 0 , short cmdid = 0 , float trkDuration = 12.0 , precisetime ra_mean = "(12:00:00.00)" , preciseangle dec_mean = "27:00:00.00" , float epoch = 1900.5 , float ra_app = 0.0 , float dec_app = 0.0 , float target_epoch = 2000.0 , float ra_offset = 0.0 , float dra = 0.0 , float dec_offset = 0.0 , float ddec = 0.0 , float dradec_reftime = 0.0 , float az_offset = 0.0 , float daz = 0.0 , float el_offset = 0.0 , float del = 0.0 , float dazel_reftime = 0.0 , float curr_time = 0.0 , short trkflag = 0 , short trkon = 0 , float timezone = 5.5 , float lat = 19.1 , float longitude = 74.05 , float longcorr = 0.0 , float azcorr = 0.0 , float elcorr = 0.0 , float elmin = 20.0 , float elmax = 110.0 , float azmin = -260.0 , float azmax = 255.0 , float scan_dra = 0.0 , float scan_ddec = 0.0 , float scan_daz = 0.0 , float scan_del = 0.0 , float length = 0.0 , float trkTimer = 0.0 , float az = 100.0 , float az_gmrt = 100.0 , float el = 90.0 , float el_gmrt = 90.0 , float lctrise = 0.0 , float lctset = 0.0 ]
+track_off_ra_dec_101 101 [ hwId = 68 , cmdPkt = 4 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , string Axis = "B" , string source_name = "NGPOLE" , short outtrk = 0 , short cmdid = 0 , float trkDuration = 12.0 , precisetime ra_mean = "(12:00:00.00)" , preciseangle dec_mean = "27:00:00.00" , float epoch = 1900.5 , float ra_app = 0.0 , float dec_app = 0.0 , float target_epoch = 2000.0 , float ra_offset = 0.0 , float dra = 0.0 , float dec_offset = 0.0 , float ddec = 0.0 , float dradec_reftime = 0.0 , float az_offset = 0.0 , float daz = 0.0 , float el_offset = 0.0 , float del = 0.0 , float dazel_reftime = 0.0 , float curr_time = 0.0 , short trkflag = 0 , short trkon = 0 , float timezone = 5.5 , float lat = 19.1 , float longitude = 74.05 , float longcorr = 0.0 , float azcorr = 0.0 , float elcorr = 0.0 , float elmin = 20.0 , float elmax = 110.0 , float azmin = -260.0 , float azmax = 255.0 , float scan_dra = 0.0 , float scan_ddec = 0.0 , float scan_daz = 0.0 , float scan_del = 0.0 , float length = 0.0 , float trkTimer = 0.0 , float az = 100.0 , float az_gmrt = 100.0 , float el = 90.0 , float el_gmrt = 90.0 , float lctrise = 0.0 , float lctset = 0.0 ]
+scan_az_el_102 102 [ hwId = 68 , cmdPkt = 4 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , string Axis = "B" , string source_name = "NGPOLE" , short outtrk = 0 , short cmdid = 0 , float trkDuration = 12.0 , precisetime ra_mean = "(12:00:00.00)" , preciseangle dec_mean = "27:00:00.00" , float epoch = 1900.5 , float ra_app = 0.0 , float dec_app = 0.0 , float target_epoch = 2000.0 , float ra_offset = 0.0 , float dra = 0.0 , float dec_offset = 0.0 , float ddec = 0.0 , float dradec_reftime = 0.0 , float az_offset = 0.0 , float daz = 0.0 , float el_offset = 0.0 , float del = 0.0 , float dazel_reftime = 0.0 , float curr_time = 0.0 , short trkflag = 0 , short trkon = 0 , float timezone = 5.5 , float lat = 19.1 , float longitude = 74.05 , float longcorr = 0.0 , float azcorr = 0.0 , float elcorr = 0.0 , float elmin = 20.0 , float elmax = 110.0 , float azmin = -260.0 , float azmax = 255.0 , float scan_dra = 0.0 , float scan_ddec = 0.0 , float scan_daz = 0.0 , float scan_del = 0.0 , float length = 0.0 , float trkTimer = 0.0 , float az = 100.0 , float az_gmrt = 100.0 , float el = 90.0 , float el_gmrt = 90.0 , float lctrise = 0.0 , float lctset = 0.0 ]
+scan_ra_dec_103 103 [ hwId = 68 , cmdPkt = 4 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , string Axis = "B" , string source_name = "NGPOLE" , short outtrk = 0 , short cmdid = 0 , float trkDuration = 12.0 , precisetime ra_mean = "(12:00:00.00)" , preciseangle dec_mean = "27:00:00.00" , float epoch = 1900.5 , float ra_app = 0.0 , float dec_app = 0.0 , float target_epoch = 2000.0 , float ra_offset = 0.0 , float dra = 0.0 , float dec_offset = 0.0 , float ddec = 0.0 , float dradec_reftime = 0.0 , float az_offset = 0.0 , float daz = 0.0 , float el_offset = 0.0 , float del = 0.0 , float dazel_reftime = 0.0 , float curr_time = 0.0 , short trkflag = 0 , short trkon = 0 , float timezone = 5.5 , float lat = 19.1 , float longitude = 74.05 , float longcorr = 0.0 , float azcorr = 0.0 , float elcorr = 0.0 , float elmin = 20.0 , float elmax = 110.0 , float azmin = -260.0 , float azmax = 255.0 , float scan_dra = 0.0 , float scan_ddec = 0.0 , float scan_daz = 0.0 , float scan_del = 0.0 , float length = 0.0 , float trkTimer = 0.0 , float az = 100.0 , float az_gmrt = 100.0 , float el = 90.0 , float el_gmrt = 90.0 , float lctrise = 0.0 , float lctset = 0.0 ]
+init_118 118 [ hwId = 96 , cmdPkt = 0, int flag =1 ]
+setDomonTimeInterval_121 121 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , short domonTimeInterval = 3 ]
+setShutdown_109 109 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 3 , PrivilegeName= servo_engineer_write ]
+use_pointing_162 162 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , boolean pointing_flag = false ]
+read_set_parameter_170 170 [ hwId = 54 , cmdPkt = 0 , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , PrivilegeId= 3 , PrivilegeName= servo_engineer_write ]
+set_azel_corr_171 171 [ hwId = 0 , cmdPkt = 0 , PrivilegeId= 1 , PrivilegeName= lmc_engineer_write , PrivilegeId= 3 , PrivilegeName= servo_engineer_write , float azcorr = 0.0 , float elcorr = 0.0 ]
+track_188 188 [ hwId = 68 , cmdPkt = 4 ]
+trackaz_189 189 [ hwId = 68 , cmdPkt = 3 ]
+trackel_190 190 [ hwId = 68 , cmdPkt = 3 ]
+hardreset_191 191 [ hwId = 108 , cmdPkt = 0 ]
+settime_192 192 [ hwId = 82 , cmdPkt = 2 ]
+}
+operatingStates
+{
+ok , reset , suspend , timeout , maintenance , shutdown , disconnected
+}
+TangoDetails { DeviceId = 3 , DomainName = LMC , FamilyName = C20 , TangoMember = SERVO , HostName = ngmnc }
+ioReferenceDetails { ReferenceId= 15 , ReferenecName= SERVO } }
+ControlNode SERVO implements interface C20.SERVO {
+DeviceCommandResponseBlock {
+DeviceCommand C20.SERVO.position_1 {
+CommandValidation {
+Validation {
+C20.SERVO.position_1.Axis [ Possiblevalues = [ "B" ] ]
+C20.SERVO.position_1.Az_Angle [ MaxValue = "260:00:00" MinValue = "-260:00:00" ]
+C20.SERVO.position_1.El_Angle [ MaxValue = "110:00:00" MinValue = "20:00:00" ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 60 }
+}
+DeviceCommand C20.SERVO.position_2 {
+CommandValidation {
+Validation {
+C20.SERVO.position_2.Axis [ Possiblevalues = [ "A" ] ]
+C20.SERVO.position_2.Az_Angle [ MaxValue = "260:00:00" MinValue = "-260:00:00" ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 60 }
+}
+DeviceCommand C20.SERVO.hold_3 {
+CommandValidation {
+Validation {
+C20.SERVO.hold_3.Axis [ Possiblevalues = [ "A" ] [ "E" ] [ "B" ] ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.stop_4 {
+CommandValidation {
+Validation {
+C20.SERVO.stop_4.Axis [ Possiblevalues = [ "A" ] [ "E" ] [ "B" ] ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.stow_5 {
+CommandValidation {
+Validation {
+C20.SERVO.stow_5.Axis [ Possiblevalues = [ "E" ] ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.stowrelease_6 {
+CommandValidation {
+Validation {
+C20.SERVO.stowrelease_6.Axis [ Possiblevalues = [ "E" ] ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.abort_7 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.setMaintenance_79 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand C20.SERVO.setReset_80 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand C20.SERVO.position_86 {
+CommandValidation {
+Validation {
+C20.SERVO.position_86.Axis [ Possiblevalues = [ "E" ] ]
+C20.SERVO.position_86.El_Angle [ MaxValue = "110:00:00" MinValue = "20:00:00" ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 60 }
+}
+DeviceCommand C20.SERVO.park_87 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 60 }
+}
+DeviceCommand C20.SERVO.initSrv_92 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 1 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.init_ant_para_93 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 1 , RetryCount = 0 , Timeout = 10 }
+}
+DeviceCommand C20.SERVO.init_src_para_94 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 1 , RetryCount = 0 , Timeout = 10 }
+}
+DeviceCommand C20.SERVO.set_src_para_95 {
+CommandValidation {
+Validation {
+C20.SERVO.set_src_para_95.source_name [ Possiblevalues = [ "NGPOLE" ] [ "*" ] ]
+C20.SERVO.set_src_para_95.ra_mean [ MaxValue = "(24:00:00.0)" MinValue = "(00:00:00.0)" ]
+C20.SERVO.set_src_para_95.dec_mean [ MaxValue = "90:00:00.0" MinValue = "-56:00:00.0" ]
+C20.SERVO.set_src_para_95.epoch [ MaxValue = 2500.0 MinValue = 1500.0 Possiblevalues = [ "*" ] ]
+C20.SERVO.set_src_para_95.ra_app [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.set_src_para_95.dec_app [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.set_src_para_95.target_epoch [ MaxValue = 2500.0 MinValue = 1500.0 ]
+C20.SERVO.set_src_para_95.ra_offset [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.set_src_para_95.dra [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.set_src_para_95.dec_offset [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.set_src_para_95.ddec [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.set_src_para_95.dradec_reftime [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.set_src_para_95.az_offset [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.set_src_para_95.daz [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.set_src_para_95.el_offset [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.set_src_para_95.del [ MaxValue = 90.0 MinValue = 0.0 ]
+C20.SERVO.set_src_para_95.dazel_reftime [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.set_src_para_95.curr_time [ MaxValue = 23.99 MinValue = 0.0 ]
+C20.SERVO.set_src_para_95.trkDuration [ MaxValue = 12.0 MinValue = 0.0 ]
+C20.SERVO.set_src_para_95.length [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.set_src_para_95.scan_dra [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.set_src_para_95.scan_ddec [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.set_src_para_95.scan_daz [ MaxValue = 260.0 MinValue = -260.0 ]
+C20.SERVO.set_src_para_95.scan_del [ MaxValue = 90.0 MinValue = 0.0 ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 1 , RetryCount = 0 , Timeout = 10 }
+}
+DeviceCommand C20.SERVO.set_ant_para_96 {
+CommandValidation {
+Validation {
+C20.SERVO.set_ant_para_96.azcorr [ MaxValue = 10.0 MinValue = -10.0 ]
+C20.SERVO.set_ant_para_96.elcorr [ MaxValue = 10.0 MinValue = -10.0 ]
+C20.SERVO.set_ant_para_96.elmin [ MaxValue = 22.0 MinValue = 17.0 ]
+C20.SERVO.set_ant_para_96.elmax [ MaxValue = 111.0 MinValue = 109.0 ]
+C20.SERVO.set_ant_para_96.azmin [ MaxValue = -259.0 MinValue = -261.0 ]
+C20.SERVO.set_ant_para_96.azmax [ MaxValue = 260.0 MinValue = 250.0 ]
+C20.SERVO.set_ant_para_96.trkflag [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.set_ant_para_96.trkon [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.set_ant_para_96.timezone [ MaxValue = 12.0 MinValue = -12.0 ]
+C20.SERVO.set_ant_para_96.lat [ MaxValue = 90.0 MinValue = -90.0 ]
+C20.SERVO.set_ant_para_96.longitude [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.set_ant_para_96.longcorr [ MaxValue = 1000.0 MinValue = 0.0 ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 1 , RetryCount = 0 , Timeout = 10 }
+}
+DeviceCommand C20.SERVO.set_track_path_97 {
+CommandValidation {
+Validation {
+C20.SERVO.set_track_path_97.trkflag [ Possiblevalues = [ 0 ] [ 1 ] ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 1 , RetryCount = 0 , Timeout = 10 }
+}
+DeviceCommand C20.SERVO.stop_track_98 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 1 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.track_object_99 {
+CommandValidation {
+Validation {
+C20.SERVO.track_object_99.Axis [ Possiblevalues = [ "A" ] [ "E" ] [ "B" ] ]
+C20.SERVO.track_object_99.source_name [ Possiblevalues = [ "NGPOLE" ] [ "*" ] ]
+C20.SERVO.track_object_99.outtrk [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.track_object_99.cmdid [ MaxValue = 99 MinValue = 0 ]
+C20.SERVO.track_object_99.trkDuration [ MaxValue = 12.0 MinValue = 0.0 ]
+C20.SERVO.track_object_99.ra_mean [ MaxValue = "(24:00:00.0)" MinValue = "(00:00:00.0)" ]
+C20.SERVO.track_object_99.dec_mean [ MaxValue = "90:00:00.0" MinValue = "-56:00:00.0" ]
+C20.SERVO.track_object_99.epoch [ MaxValue = 2500.0 MinValue = 1500.0 Possiblevalues = [ "*" ] ]
+C20.SERVO.track_object_99.ra_app [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_object_99.dec_app [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.track_object_99.target_epoch [ MaxValue = 2500.0 MinValue = 1500.0 ]
+C20.SERVO.track_object_99.ra_offset [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_object_99.dra [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_object_99.dec_offset [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.track_object_99.ddec [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.track_object_99.dradec_reftime [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_object_99.az_offset [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.track_object_99.daz [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.track_object_99.el_offset [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.track_object_99.del [ MaxValue = 90.0 MinValue = 0.0 ]
+C20.SERVO.track_object_99.dazel_reftime [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_object_99.curr_time [ MaxValue = 23.99 MinValue = 0.0 ]
+C20.SERVO.track_object_99.trkflag [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.track_object_99.trkon [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.track_object_99.timezone [ MaxValue = 12.0 MinValue = -12.0 ]
+C20.SERVO.track_object_99.lat [ MaxValue = 90.0 MinValue = -90.0 ]
+C20.SERVO.track_object_99.longitude [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.track_object_99.longcorr [ MaxValue = 1000.0 MinValue = 0.0 ]
+C20.SERVO.track_object_99.azcorr [ MaxValue = 10.0 MinValue = -10.0 ]
+C20.SERVO.track_object_99.elcorr [ MaxValue = 10.0 MinValue = -10.0 ]
+C20.SERVO.track_object_99.elmin [ MaxValue = 22.0 MinValue = 17.0 ]
+C20.SERVO.track_object_99.elmax [ MaxValue = 111.0 MinValue = 109.0 ]
+C20.SERVO.track_object_99.azmin [ MaxValue = -259.0 MinValue = -261.0 ]
+C20.SERVO.track_object_99.azmax [ MaxValue = 260.0 MinValue = 250.0 ]
+C20.SERVO.track_object_99.scan_dra [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_object_99.scan_ddec [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.track_object_99.scan_daz [ MaxValue = 260.0 MinValue = -260.0 ]
+C20.SERVO.track_object_99.scan_del [ MaxValue = 90.0 MinValue = 0.0 ]
+C20.SERVO.track_object_99.length [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.track_object_99.trkTimer [ MaxValue = 12.0 MinValue = 0.0 ]
+C20.SERVO.track_object_99.az [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.track_object_99.az_gmrt [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.track_object_99.el [ MaxValue = 110.0 MinValue = 15.0 ]
+C20.SERVO.track_object_99.el_gmrt [ MaxValue = 105.0 MinValue = 17.0 ]
+C20.SERVO.track_object_99.lctrise [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_object_99.lctset [ MaxValue = 24.0 MinValue = -1.0 ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.track_off_az_el_100 {
+CommandValidation {
+Validation {
+C20.SERVO.track_off_az_el_100.Axis [ Possiblevalues = [ "A" ] [ "E" ] [ "B" ] ]
+C20.SERVO.track_off_az_el_100.source_name [ Possiblevalues = [ "NGPOLE" ] [ "*" ] ]
+C20.SERVO.track_off_az_el_100.outtrk [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.track_off_az_el_100.cmdid [ MaxValue = 99 MinValue = 0 ]
+C20.SERVO.track_off_az_el_100.trkDuration [ MaxValue = 12.0 MinValue = 0.0 ]
+C20.SERVO.track_off_az_el_100.ra_mean [ MaxValue = "(24:00:00.0)" MinValue = "(00:00:00.0)" ]
+C20.SERVO.track_off_az_el_100.dec_mean [ MaxValue = "90:00:00.0" MinValue = "-56:00:00.0" ]
+C20.SERVO.track_off_az_el_100.epoch [ MaxValue = 2500.0 MinValue = 1500.0 Possiblevalues = [ "*" ] ]
+C20.SERVO.track_off_az_el_100.ra_app [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_off_az_el_100.dec_app [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.track_off_az_el_100.target_epoch [ MaxValue = 2500.0 MinValue = 1500.0 ]
+C20.SERVO.track_off_az_el_100.ra_offset [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_off_az_el_100.dra [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_off_az_el_100.dec_offset [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.track_off_az_el_100.ddec [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.track_off_az_el_100.dradec_reftime [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_off_az_el_100.az_offset [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.track_off_az_el_100.daz [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.track_off_az_el_100.el_offset [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.track_off_az_el_100.del [ MaxValue = 90.0 MinValue = 0.0 ]
+C20.SERVO.track_off_az_el_100.dazel_reftime [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_off_az_el_100.curr_time [ MaxValue = 23.99 MinValue = 0.0 ]
+C20.SERVO.track_off_az_el_100.trkflag [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.track_off_az_el_100.trkon [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.track_off_az_el_100.timezone [ MaxValue = 12.0 MinValue = -12.0 ]
+C20.SERVO.track_off_az_el_100.lat [ MaxValue = 90.0 MinValue = -90.0 ]
+C20.SERVO.track_off_az_el_100.longitude [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.track_off_az_el_100.longcorr [ MaxValue = 1000.0 MinValue = 0.0 ]
+C20.SERVO.track_off_az_el_100.azcorr [ MaxValue = 10.0 MinValue = -10.0 ]
+C20.SERVO.track_off_az_el_100.elcorr [ MaxValue = 10.0 MinValue = -10.0 ]
+C20.SERVO.track_off_az_el_100.elmin [ MaxValue = 22.0 MinValue = 17.0 ]
+C20.SERVO.track_off_az_el_100.elmax [ MaxValue = 111.0 MinValue = 109.0 ]
+C20.SERVO.track_off_az_el_100.azmin [ MaxValue = -259.0 MinValue = -261.0 ]
+C20.SERVO.track_off_az_el_100.azmax [ MaxValue = 260.0 MinValue = 250.0 ]
+C20.SERVO.track_off_az_el_100.scan_dra [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_off_az_el_100.scan_ddec [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.track_off_az_el_100.scan_daz [ MaxValue = 260.0 MinValue = -260.0 ]
+C20.SERVO.track_off_az_el_100.scan_del [ MaxValue = 90.0 MinValue = 0.0 ]
+C20.SERVO.track_off_az_el_100.length [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.track_off_az_el_100.trkTimer [ MaxValue = 12.0 MinValue = 0.0 ]
+C20.SERVO.track_off_az_el_100.az [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.track_off_az_el_100.az_gmrt [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.track_off_az_el_100.el [ MaxValue = 110.0 MinValue = 15.0 ]
+C20.SERVO.track_off_az_el_100.el_gmrt [ MaxValue = 105.0 MinValue = 17.0 ]
+C20.SERVO.track_off_az_el_100.lctrise [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_off_az_el_100.lctset [ MaxValue = 24.0 MinValue = -1.0 ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.track_off_ra_dec_101 {
+CommandValidation {
+Validation {
+C20.SERVO.track_off_ra_dec_101.Axis [ Possiblevalues = [ "A" ] [ "E" ] [ "B" ] ]
+C20.SERVO.track_off_ra_dec_101.source_name [ Possiblevalues = [ "NGPOLE" ] [ "*" ] ]
+C20.SERVO.track_off_ra_dec_101.outtrk [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.track_off_ra_dec_101.cmdid [ MaxValue = 99 MinValue = 0 ]
+C20.SERVO.track_off_ra_dec_101.trkDuration [ MaxValue = 12.0 MinValue = 0.0 ]
+C20.SERVO.track_off_ra_dec_101.ra_mean [ MaxValue = "(24:00:00.0)" MinValue = "(00:00:00.0)" ]
+C20.SERVO.track_off_ra_dec_101.dec_mean [ MaxValue = "90:00:00.0" MinValue = "-56:00:00.0" ]
+C20.SERVO.track_off_ra_dec_101.epoch [ MaxValue = 2500.0 MinValue = 1500.0 Possiblevalues = [ "*" ] ]
+C20.SERVO.track_off_ra_dec_101.ra_app [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_off_ra_dec_101.dec_app [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.track_off_ra_dec_101.target_epoch [ MaxValue = 2500.0 MinValue = 1500.0 ]
+C20.SERVO.track_off_ra_dec_101.ra_offset [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_off_ra_dec_101.dra [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_off_ra_dec_101.dec_offset [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.track_off_ra_dec_101.ddec [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.track_off_ra_dec_101.dradec_reftime [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_off_ra_dec_101.az_offset [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.track_off_ra_dec_101.daz [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.track_off_ra_dec_101.el_offset [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.track_off_ra_dec_101.del [ MaxValue = 90.0 MinValue = 0.0 ]
+C20.SERVO.track_off_ra_dec_101.dazel_reftime [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_off_ra_dec_101.curr_time [ MaxValue = 23.99 MinValue = 0.0 ]
+C20.SERVO.track_off_ra_dec_101.trkflag [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.track_off_ra_dec_101.trkon [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.track_off_ra_dec_101.timezone [ MaxValue = 12.0 MinValue = -12.0 ]
+C20.SERVO.track_off_ra_dec_101.lat [ MaxValue = 90.0 MinValue = -90.0 ]
+C20.SERVO.track_off_ra_dec_101.longitude [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.track_off_ra_dec_101.longcorr [ MaxValue = 1000.0 MinValue = 0.0 ]
+C20.SERVO.track_off_ra_dec_101.azcorr [ MaxValue = 10.0 MinValue = -10.0 ]
+C20.SERVO.track_off_ra_dec_101.elcorr [ MaxValue = 10.0 MinValue = -10.0 ]
+C20.SERVO.track_off_ra_dec_101.elmin [ MaxValue = 22.0 MinValue = 17.0 ]
+C20.SERVO.track_off_ra_dec_101.elmax [ MaxValue = 111.0 MinValue = 109.0 ]
+C20.SERVO.track_off_ra_dec_101.azmin [ MaxValue = -259.0 MinValue = -261.0 ]
+C20.SERVO.track_off_ra_dec_101.azmax [ MaxValue = 260.0 MinValue = 250.0 ]
+C20.SERVO.track_off_ra_dec_101.scan_dra [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_off_ra_dec_101.scan_ddec [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.track_off_ra_dec_101.scan_daz [ MaxValue = 260.0 MinValue = -260.0 ]
+C20.SERVO.track_off_ra_dec_101.scan_del [ MaxValue = 90.0 MinValue = 0.0 ]
+C20.SERVO.track_off_ra_dec_101.length [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.track_off_ra_dec_101.trkTimer [ MaxValue = 12.0 MinValue = 0.0 ]
+C20.SERVO.track_off_ra_dec_101.az [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.track_off_ra_dec_101.az_gmrt [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.track_off_ra_dec_101.el [ MaxValue = 110.0 MinValue = 15.0 ]
+C20.SERVO.track_off_ra_dec_101.el_gmrt [ MaxValue = 105.0 MinValue = 17.0 ]
+C20.SERVO.track_off_ra_dec_101.lctrise [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.track_off_ra_dec_101.lctset [ MaxValue = 24.0 MinValue = -1.0 ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.scan_az_el_102 {
+CommandValidation {
+Validation {
+C20.SERVO.scan_az_el_102.Axis [ Possiblevalues = [ "A" ] [ "E" ] [ "B" ] ]
+C20.SERVO.scan_az_el_102.source_name [ Possiblevalues = [ "NGPOLE" ] [ "*" ] ]
+C20.SERVO.scan_az_el_102.outtrk [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.scan_az_el_102.cmdid [ MaxValue = 99 MinValue = 0 ]
+C20.SERVO.scan_az_el_102.trkDuration [ MaxValue = 12.0 MinValue = 0.0 ]
+C20.SERVO.scan_az_el_102.ra_mean [ MaxValue = "(24:00:00.0)" MinValue = "(00:00:00.0)" ]
+C20.SERVO.scan_az_el_102.dec_mean [ MaxValue = "90:00:00.0" MinValue = "-56:00:00.0" ]
+C20.SERVO.scan_az_el_102.epoch [ MaxValue = 2500.0 MinValue = 1500.0 Possiblevalues = [ "*" ] ]
+C20.SERVO.scan_az_el_102.ra_app [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.scan_az_el_102.dec_app [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.scan_az_el_102.target_epoch [ MaxValue = 2500.0 MinValue = 1500.0 ]
+C20.SERVO.scan_az_el_102.ra_offset [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.scan_az_el_102.dra [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.scan_az_el_102.dec_offset [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.scan_az_el_102.ddec [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.scan_az_el_102.dradec_reftime [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.scan_az_el_102.az_offset [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.scan_az_el_102.daz [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.scan_az_el_102.el_offset [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.scan_az_el_102.del [ MaxValue = 90.0 MinValue = 0.0 ]
+C20.SERVO.scan_az_el_102.dazel_reftime [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.scan_az_el_102.curr_time [ MaxValue = 23.99 MinValue = 0.0 ]
+C20.SERVO.scan_az_el_102.trkflag [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.scan_az_el_102.trkon [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.scan_az_el_102.timezone [ MaxValue = 12.0 MinValue = -12.0 ]
+C20.SERVO.scan_az_el_102.lat [ MaxValue = 90.0 MinValue = -90.0 ]
+C20.SERVO.scan_az_el_102.longitude [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.scan_az_el_102.longcorr [ MaxValue = 1000.0 MinValue = 0.0 ]
+C20.SERVO.scan_az_el_102.azcorr [ MaxValue = 10.0 MinValue = -10.0 ]
+C20.SERVO.scan_az_el_102.elcorr [ MaxValue = 10.0 MinValue = -10.0 ]
+C20.SERVO.scan_az_el_102.elmin [ MaxValue = 22.0 MinValue = 17.0 ]
+C20.SERVO.scan_az_el_102.elmax [ MaxValue = 111.0 MinValue = 109.0 ]
+C20.SERVO.scan_az_el_102.azmin [ MaxValue = -259.0 MinValue = -261.0 ]
+C20.SERVO.scan_az_el_102.azmax [ MaxValue = 260.0 MinValue = 250.0 ]
+C20.SERVO.scan_az_el_102.scan_dra [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.scan_az_el_102.scan_ddec [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.scan_az_el_102.scan_daz [ MaxValue = 260.0 MinValue = -260.0 ]
+C20.SERVO.scan_az_el_102.scan_del [ MaxValue = 90.0 MinValue = 0.0 ]
+C20.SERVO.scan_az_el_102.length [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.scan_az_el_102.trkTimer [ MaxValue = 12.0 MinValue = 0.0 ]
+C20.SERVO.scan_az_el_102.az [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.scan_az_el_102.az_gmrt [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.scan_az_el_102.el [ MaxValue = 110.0 MinValue = 15.0 ]
+C20.SERVO.scan_az_el_102.el_gmrt [ MaxValue = 105.0 MinValue = 17.0 ]
+C20.SERVO.scan_az_el_102.lctrise [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.scan_az_el_102.lctset [ MaxValue = 24.0 MinValue = -1.0 ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.scan_ra_dec_103 {
+CommandValidation {
+Validation {
+C20.SERVO.scan_ra_dec_103.Axis [ Possiblevalues = [ "A" ] [ "E" ] [ "B" ] ]
+C20.SERVO.scan_ra_dec_103.source_name [ Possiblevalues = [ "NGPOLE" ] [ "*" ] ]
+C20.SERVO.scan_ra_dec_103.outtrk [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.scan_ra_dec_103.cmdid [ MaxValue = 99 MinValue = 0 ]
+C20.SERVO.scan_ra_dec_103.trkDuration [ MaxValue = 12.0 MinValue = 0.0 ]
+C20.SERVO.scan_ra_dec_103.ra_mean [ MaxValue = "(24:00:00.0)" MinValue = "(00:00:00.0)" ]
+C20.SERVO.scan_ra_dec_103.dec_mean [ MaxValue = "90:00:00.0" MinValue = "-56:00:00.0" ]
+C20.SERVO.scan_ra_dec_103.epoch [ MaxValue = 2500.0 MinValue = 1500.0 Possiblevalues = [ "*" ] ]
+C20.SERVO.scan_ra_dec_103.ra_app [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.scan_ra_dec_103.dec_app [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.scan_ra_dec_103.target_epoch [ MaxValue = 2500.0 MinValue = 1500.0 ]
+C20.SERVO.scan_ra_dec_103.ra_offset [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.scan_ra_dec_103.dra [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.scan_ra_dec_103.dec_offset [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.scan_ra_dec_103.ddec [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.scan_ra_dec_103.dradec_reftime [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.scan_ra_dec_103.az_offset [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.scan_ra_dec_103.daz [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.scan_ra_dec_103.el_offset [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.scan_ra_dec_103.del [ MaxValue = 90.0 MinValue = 0.0 ]
+C20.SERVO.scan_ra_dec_103.dazel_reftime [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.scan_ra_dec_103.curr_time [ MaxValue = 23.99 MinValue = 0.0 ]
+C20.SERVO.scan_ra_dec_103.trkflag [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.scan_ra_dec_103.trkon [ Possiblevalues = [ 0 ] [ 1 ] ]
+C20.SERVO.scan_ra_dec_103.timezone [ MaxValue = 12.0 MinValue = -12.0 ]
+C20.SERVO.scan_ra_dec_103.lat [ MaxValue = 90.0 MinValue = -90.0 ]
+C20.SERVO.scan_ra_dec_103.longitude [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.scan_ra_dec_103.longcorr [ MaxValue = 1000.0 MinValue = 0.0 ]
+C20.SERVO.scan_ra_dec_103.azcorr [ MaxValue = 10.0 MinValue = -10.0 ]
+C20.SERVO.scan_ra_dec_103.elcorr [ MaxValue = 10.0 MinValue = -10.0 ]
+C20.SERVO.scan_ra_dec_103.elmin [ MaxValue = 22.0 MinValue = 17.0 ]
+C20.SERVO.scan_ra_dec_103.elmax [ MaxValue = 111.0 MinValue = 109.0 ]
+C20.SERVO.scan_ra_dec_103.azmin [ MaxValue = -259.0 MinValue = -261.0 ]
+C20.SERVO.scan_ra_dec_103.azmax [ MaxValue = 260.0 MinValue = 250.0 ]
+C20.SERVO.scan_ra_dec_103.scan_dra [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.scan_ra_dec_103.scan_ddec [ MaxValue = 90.0 MinValue = -56.0 ]
+C20.SERVO.scan_ra_dec_103.scan_daz [ MaxValue = 260.0 MinValue = -260.0 ]
+C20.SERVO.scan_ra_dec_103.scan_del [ MaxValue = 90.0 MinValue = 0.0 ]
+C20.SERVO.scan_ra_dec_103.length [ MaxValue = 180.0 MinValue = -180.0 ]
+C20.SERVO.scan_ra_dec_103.trkTimer [ MaxValue = 12.0 MinValue = 0.0 ]
+C20.SERVO.scan_ra_dec_103.az [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.scan_ra_dec_103.az_gmrt [ MaxValue = 270.0 MinValue = -270.0 ]
+C20.SERVO.scan_ra_dec_103.el [ MaxValue = 110.0 MinValue = 15.0 ]
+C20.SERVO.scan_ra_dec_103.el_gmrt [ MaxValue = 105.0 MinValue = 17.0 ]
+C20.SERVO.scan_ra_dec_103.lctrise [ MaxValue = 24.0 MinValue = 0.0 ]
+C20.SERVO.scan_ra_dec_103.lctset [ MaxValue = 24.0 MinValue = -1.0 ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.init_118 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 1 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.setDomonTimeInterval_121 {
+CommandValidation {
+Validation {
+C20.SERVO.setDomonTimeInterval_121.domonTimeInterval [ MaxValue = 64 MinValue = -1 ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.setShutdown_109 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand C20.SERVO.use_pointing_162 {
+CommandValidation {
+Validation {
+C20.SERVO.use_pointing_162.pointing_flag [ Possiblevalues = [ false ] [ false ] ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.read_set_parameter_170 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.set_azel_corr_171 {
+CommandValidation {
+Validation {
+C20.SERVO.set_azel_corr_171.azcorr [ MaxValue = 10.0 MinValue = -10.0 ]
+C20.SERVO.set_azel_corr_171.elcorr [ MaxValue = 10.0 MinValue = -10.0 ]
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 120 }
+}
+DeviceCommand C20.SERVO.track_188 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.trackaz_189 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.trackel_190 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+}
+DeviceCommand C20.SERVO.hardreset_191 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 20 }
+}
+DeviceCommand C20.SERVO.settime_192 {
+CommandValidation {
+Validation {
+}
+}
+StateTransition {
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.suspend
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.disconnected
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown => nextState C20.SERVO.reset
+currentState C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.ok
+currentState C20.SERVO.ok , C20.SERVO.suspend , C20.SERVO.shutdown => nextState C20.SERVO.maintenance
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.timeout , C20.SERVO.maintenance , C20.SERVO.disconnected => nextState C20.SERVO.shutdown
+currentState C20.SERVO.ok , C20.SERVO.reset , C20.SERVO.suspend , C20.SERVO.maintenance , C20.SERVO.shutdown , C20.SERVO.disconnected => nextState C20.SERVO.timeout
+}
+Features { Priority = 0 , RetryCount = 0 , Timeout = 30 }
+} } }
